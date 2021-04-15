@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qDcJGHn80XwGEFtsELs64eKWkw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Python.atv_2">
+    <configuration name="atv_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PI7_PIHM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/7° semestre/Construção de Compiladores/exercicios/atv_2" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/7° semestre/Construção de Compiladores/exercicios/atv_2/atv_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="atv_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PI7_PIHM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/7° semestre/Construção de Compiladores/exercicios/atv_3" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/7° semestre/Construção de Compiladores/exercicios/atv_3/atv_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.atv_2" />
+        <item itemvalue="Python.atv_3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="" />
+      <created>1616617527717</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616617527717</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618515804846">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618515804846" />
+    <state width="1579" height="257" key="GridCell.Tab.0.bottom" timestamp="1618314619777">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="257" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1618314619777" />
+    <state width="1579" height="257" key="GridCell.Tab.0.center" timestamp="1618314619776">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="257" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1618314619776" />
+    <state width="1579" height="257" key="GridCell.Tab.0.left" timestamp="1618314619776">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="257" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1618314619776" />
+    <state width="1579" height="257" key="GridCell.Tab.0.right" timestamp="1618314619776">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="257" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1618314619776" />
+    <state width="1579" height="254" key="GridCell.Tab.1.bottom" timestamp="1618192499787">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="254" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1618192499787" />
+    <state width="1579" height="254" key="GridCell.Tab.1.center" timestamp="1618192499786">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="254" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
+    <state width="1579" height="254" key="GridCell.Tab.1.left" timestamp="1618192499786">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="254" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
+    <state width="1579" height="254" key="GridCell.Tab.1.right" timestamp="1618192499786">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1579" height="254" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1618514341320">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1618514341320" />
+  </component>
+</project>
