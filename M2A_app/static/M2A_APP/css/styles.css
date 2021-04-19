@@ -1,20 +1,19 @@
 body{
     margin:0;
     padding:0;
-    background-color: #A9A9A9;
+    background: #ebebeb;
     font-family: "Comfortaa", "Arial", sans-serif;
 }
 
 #logo{
-    border-radius: 90%;
-    padding: 15px;
+    padding: 40px;
 }
 
 .login{
     width: 480px;
     height: 480px;
-    border: 2px solid #000;
-    border-radius: 80px 80px 80px 80px;
+    border: 2px solid #C4C4C4;
+    border-radius: 60px 60px 60px 60px;
     color: #fff;
     background-color: #C4C4C4;
     top: 50%;
@@ -59,7 +58,7 @@ h1{
     background: transparent;
     outline: none;
     height: 40px;
-    color: white;
+    color: black;
     font-size: 18px;
 }
 
@@ -81,24 +80,24 @@ h1{
 
 .login a{
     font-weight: bold;
-    color: 4b4b4b;
+    color: #0075FF;
     transition: 1s;
 }
 
 .login a:hover{
-    transition: 0.2s;
-    color: #ff4d4d;
+    transition: 0.1s;
+    color: #004CA5;
 }
 
 footer{
     color: white;
-    background: #454747;
+    background: #7C7C7C;
     font-size: 20px;
     text-align: center;
     width: 100%;
     position: absolute;
     bottom: 0;
     letter-spacing: 1px;
-    padding-top: 5px;
+    padding-top: 7px;
     padding-bottom: 5px;
 }

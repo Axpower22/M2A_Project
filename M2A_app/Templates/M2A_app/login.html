@@ -3,13 +3,14 @@
     <head>
         {% load static %}
         <link rel="stylesheet" href="{% static 'M2A_app/css/styles.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <title>Login</title>
     </head>
 
-    <body>
-        <img src="{% static 'M2A_app/img/princess.png' %}" id="logo">
+    <body onselectstart=”return false”>
+        <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
         <div class="login">
             <h1>Acesso ao Sistema</h1>
             <form autocomplete="off">
