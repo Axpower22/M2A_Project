@@ -1,0 +1,104 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #A9A9A9;
+    font-family: "Comfortaa", "Arial", sans-serif;
+}
+
+#logo{
+    border-radius: 90%;
+    padding: 15px;
+}
+
+.login{
+    width: 480px;
+    height: 480px;
+    border: 2px solid #000;
+    border-radius: 80px 80px 80px 80px;
+    color: #fff;
+    background-color: #C4C4C4;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px;
+}
+
+h1{
+    margin:0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    color: #004976;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+}
+
+.login p{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    height: 50px;
+}
+
+.login input[name="entrar"]{
+    width: 30%;
+    margin-bottom: 21px;
+    margin-left: 150px;
+}
+
+.login input[name="usuario"], input[name="senha"]{
+    width: 100%;
+    margin-bottom: 21px;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0px 0px 3px 10px;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+}
+
+.login input[type="submit"]{
+    border:none;
+    outline:none;
+    height: 35px;
+    color: white;
+    background: #004976;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.login input[type="submit"]:hover{
+    cursor: pointer;
+    background: #19394D;
+    transition: 0.4s;
+}
+
+.login a{
+    font-weight: bold;
+    color: 4b4b4b;
+    transition: 1s;
+}
+
+.login a:hover{
+    transition: 0.2s;
+    color: #ff4d4d;
+}
+
+footer{
+    color: white;
+    background: #454747;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

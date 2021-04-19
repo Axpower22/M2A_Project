@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from M2A_app.views import msg_test, msg_test2, datahora, login
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('msg_test/', msg_test),
     path('msg_test2/', msg_test2),
     path('data/', datahora),
     path('login/', login),
-
 ]

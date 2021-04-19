@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="" />
+    <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/img/princess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +21,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1qDcJGHn80XwGEFtsELs64eKWkw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,6 +34,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static\M2A_APP" />
+      <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static" />
+      <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\Imagens" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.atv_2">
     <configuration name="atv_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -88,10 +106,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618515804846">
+    <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618515804846" />
+    <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618740709547" />
     <state width="1579" height="257" key="GridCell.Tab.0.bottom" timestamp="1618314619777">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -124,9 +142,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1579" height="254" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1618514341320">
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1618790520840">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1618514341320" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1618790520840" />
   </component>
 </project>

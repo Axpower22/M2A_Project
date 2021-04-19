@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" dir="ltr">
     <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <title>Login</title>
     </head>
+
     <body>
-        <h1>Bem-vindo</h1>
-        <h2>Templates</h2>
-        <p><b>Hello World</b></p>
+        <img src="{% static 'M2A_app/img/princess.png' %}" id="logo">
+        <div class="login">
+            <h1>Acesso ao Sistema</h1>
+            <form autocomplete="off">
+
+                <input type="text" name="usuario" placeholder="Digite seu E-mail" autocomplete="off">
+                <input type="password" name="senha" placeholder="Digite sua Senha" autocomplete="off">
+
+                <br>
+
+                <input type="submit" name="entrar" value="Entrar">
+
+                <br>
+
+                <p><a href="#" style="text-decoration: none;">Esqueceu sua senha?</a></p>
+                <p>Ainda não tem cadastro?<a href="#" style="text-decoration: none;"> Faça o seu aqui!</a></p>
+
+            </form>
+        </div>
+
+        <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+
     </body>
 </html>
