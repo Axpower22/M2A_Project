@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/cadastro_usuario.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Cadastro Usuário</title>
+    </head>
+
+    <body>
+        <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+
+        <div class="cadastro">
+            <h1>Cadastro de Usuário</h1>
+
+            <form autocomplete="off">
+                <label>Perfil:</label>
+                <select name="perfil">
+                    <option value="1">Cliente</option>
+                    <option value="2">Cliente Master</option>
+                    <option value="3">Consultor</option>
+                    <option value="4">Consultor Master</option>
+                </select>
+
+                <label>Estado/UF:</label>
+                <select name="Estado">
+                    <option value="AC">AC-Acre</option>
+                    <option value="AL">AL-Alagoas</option>
+                    <option value="AP">AP-Amapá</option>
+                    <option value="AM">AM-Amazonas</option>
+                    <option value="BA">BA-Bahia</option>
+                    <option value="CE">CE-Ceará</option>
+                    <option value="DF">DF-Distrito Federal</option>
+                    <option value="ES">ES-Espírito Santo</option>
+                    <option value="GO">GO-Goiás</option>
+                    <option value="MA">MA-Maranhão</option>
+                    <option value="MT">MT-Mato Grosso</option>
+                    <option value="MS">MS-Mato Grosso do Sul</option>
+                    <option value="MG">MG-Minas Gerais</option>
+                    <option value="PA">PA-Pará</option>
+                    <option value="PB">PB-Paraíba</option>
+                    <option value="PR">PR-Paraná</option>
+                    <option value="PE">PE-Pernambuco</option>
+                    <option value="PI">PI-Piauí</option>
+                    <option value="RJ">RJ-Rio de Janeiro</option>
+                    <option value="RN">RN-Rio Grande do Norte</option>
+                    <option value="RS">RS-Rio Grande do Sul</option>
+                    <option value="RO">RO-Rondônia</option>
+                    <option value="RR">RR-Roraima</option>
+                    <option value="SC">SC-Santa Catarina</option>
+                    <option value="SP">SP-São Paulo</option>
+                    <option value="SE">SE-Sergipe</option>
+                    <option value="TO">TO-Tocantins</option>
+                    <option value="EX">EX-Estrangeiro</option>
+                </select>
+                <p>Nome do Usuário:</p>
+                <input type="text" name="nome" autocomplete="off">
+                <p>E-mail do Usuário:</p>
+                <input type="email" name="e-mail" autocomplete="off">
+                <p>Telefone:</p>
+                <input type="tel" name="telefone" autocomplete="off">
+            </form>
+        </div>
+
+        <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+    </body>
+</html>

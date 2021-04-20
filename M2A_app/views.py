@@ -16,4 +16,7 @@ def datahora(request):
 
 def login(request):
     return render(request, 'M2A_app/login.html')
+
+def cadastro_usuario(request):
+    return render(request, 'M2A_app/cadastro_usuario.html')
 # Create your views here.
