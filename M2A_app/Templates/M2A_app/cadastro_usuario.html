@@ -16,7 +16,7 @@
             <h1>Cadastro de Usuário</h1>
 
             <form autocomplete="off">
-                <label>Perfil:</label>
+                <label>Perfil*:</label>
                 <select name="perfil">
                     <option value="" hidden>Selecione</option>
                     <option value="1">Cliente</option>
@@ -25,7 +25,7 @@
                     <option value="4">Consultor Master</option>
                 </select>
 
-                <label id="label_estado">Estado/UF:</label>
+                <label id="label_estado">UF/Estado*:</label>
                 <select name="Estado">
                     <option value="" hidden>Selecione</option>
                     <option value="AC">AC-Acre</option>
@@ -59,17 +59,17 @@
                 </select>
 
                 <br><br>
-                <label>Nome do Usuário:</label>
+                <label>Nome*:</label>
                 <input type="text" name="nome" autocomplete="off">
                 <br>
-                <label>E-mail do Usuário:</label>
+                <label>E-mail*:</label>
                 <input type="text" name="nome" autocomplete="off">
                 <br>
-                <label id="l_tel">Telefone:</label><label id="l_c">Celular:</label><br>
-                <input type="tel" name="telefone" placeholder="(00) 0000 - 0000" autocomplete="off">
-                <input type="tel" name="celular" placeholder="(00) 00000 - 0000" autocomplete="off">
+                <label id="l_tel">Telefone:</label><label id="l_c">Celular*:</label><br>
+                <input type="tel" name="telefone" placeholder="(00) 0000-0000" autocomplete="off">
+                <input type="tel" name="celular" placeholder="(00) 00000-0000" autocomplete="off">
                 <br>
-                <label id="l_s">Senha:</label><label id="l_cs">Confirmação de Senha:</label><br>
+                <label id="l_s">Senha*:</label><label id="l_cs">Confirmação de Senha*:</label><br>
                 <input type="password" name="senha" autocomplete="off">
                 <input type="password" name="confirma_senha" autocomplete="off">
             </form>
