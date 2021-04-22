@@ -23,6 +23,5 @@ urlpatterns = [
     path('msg_test2/', msg_test2),
     path('data/', datahora),
     path('login/', login),
-    path('cadastro_usuario', cadastro_usuario),
-
+    path('cadastro_usuario/', cadastro_usuario),
 ]

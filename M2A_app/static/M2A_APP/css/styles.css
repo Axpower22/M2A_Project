@@ -2,11 +2,16 @@ body{
     margin:0;
     padding:0;
     background: #ebebeb;
+    background-image: linear-gradient(90deg, rgba(235, 235, 235),rgba(0, 73, 118), rgba(196,196, 196));
     font-family: "Comfortaa", "Arial", sans-serif;
 }
 
 #logo{
     padding: 40px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -10%);
 }
 
 .login{
@@ -22,6 +27,7 @@ body{
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 68px 28px;
+    box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.2);
 }
 
 h1{
@@ -70,12 +76,12 @@ h1{
     background: #004976;
     border-radius: 20px;
     font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
 }
 
 .login input[type="submit"]:hover{
-    cursor: pointer;
     background: #19394D;
-    transition: 0.4s;
 }
 
 .login a{
@@ -92,7 +98,7 @@ h1{
 footer{
     color: white;
     background: #7C7C7C;
-    font-size: 20px;
+    font-size: 12.9px;
     text-align: center;
     width: 100%;
     position: absolute;

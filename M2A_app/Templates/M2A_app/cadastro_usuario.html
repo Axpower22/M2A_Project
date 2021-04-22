@@ -18,14 +18,16 @@
             <form autocomplete="off">
                 <label>Perfil:</label>
                 <select name="perfil">
+                    <option value="" hidden>Selecione</option>
                     <option value="1">Cliente</option>
                     <option value="2">Cliente Master</option>
                     <option value="3">Consultor</option>
                     <option value="4">Consultor Master</option>
                 </select>
 
-                <label>Estado/UF:</label>
+                <label id="label_estado">Estado/UF:</label>
                 <select name="Estado">
+                    <option value="" hidden>Selecione</option>
                     <option value="AC">AC-Acre</option>
                     <option value="AL">AL-Alagoas</option>
                     <option value="AP">AP-Amapá</option>
@@ -53,15 +55,28 @@
                     <option value="SP">SP-São Paulo</option>
                     <option value="SE">SE-Sergipe</option>
                     <option value="TO">TO-Tocantins</option>
-                    <option value="EX">EX-Estrangeiro</option>
+                    <option value="EX">Estrangeiro</option>
                 </select>
-                <p>Nome do Usuário:</p>
+
+                <br><br>
+                <label>Nome do Usuário:</label>
                 <input type="text" name="nome" autocomplete="off">
-                <p>E-mail do Usuário:</p>
-                <input type="email" name="e-mail" autocomplete="off">
-                <p>Telefone:</p>
-                <input type="tel" name="telefone" autocomplete="off">
+                <br>
+                <label>E-mail do Usuário:</label>
+                <input type="text" name="nome" autocomplete="off">
+                <br>
+                <label id="l_tel">Telefone:</label><label id="l_c">Celular:</label><br>
+                <input type="tel" name="telefone" placeholder="(00) 0000 - 0000" autocomplete="off">
+                <input type="tel" name="celular" placeholder="(00) 00000 - 0000" autocomplete="off">
+                <br>
+                <label id="l_s">Senha:</label><label id="l_cs">Confirmação de Senha:</label><br>
+                <input type="password" name="senha" autocomplete="off">
+                <input type="password" name="confirma_senha" autocomplete="off">
             </form>
+
+            <a href="/login"><button><b>Voltar</b></button></a>
+            <button><b>Salvar</b></button>
+
         </div>
 
         <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>

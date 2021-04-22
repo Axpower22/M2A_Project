@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_usuario.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_usuario.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_usuario.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_usuario.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,13 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618858675099</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implementação do inicio de cadastro_usuario">
+      <created>1618939077708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618939077708</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tela Login parcialmente criada&#10;Alteração em diretórios&#10;Criação da static" />
     <MESSAGE value="Implementação da logo original + favicon e alteração para dores melhores e mais suaves" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação da logo original + favicon e alteração para dores melhores e mais suaves" />
+    <MESSAGE value="Implementação do inicio de cadastro_usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação do inicio de cadastro_usuario" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
@@ -177,17 +185,17 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1579" height="254" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1618858683725">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1618939104192">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1618858683725" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1618937124258">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1618939104192" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1619108759231">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1618937124258" />
-    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618938380171">
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1619108759231" />
+    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618954661802">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1618938380171" />
+    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1618954661802" />
   </component>
 </project>
