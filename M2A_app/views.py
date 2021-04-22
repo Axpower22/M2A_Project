@@ -20,3 +20,6 @@ def login(request):
 def cadastro_usuario(request):
     return render(request, 'M2A_app/cadastro_usuario.html')
 # Create your views here.
+
+def cadastro_empresa(request):
+    return render(request, 'M2A_app/cadastro_empresa.html')

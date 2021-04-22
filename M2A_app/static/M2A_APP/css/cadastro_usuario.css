@@ -87,7 +87,7 @@ label{
     cursor: disable;
 }
 
-.cadastro input[type="text"]{
+.cadastro input[name="email"], .cadastro input[name="nome"]{
     padding-bottom: 0px;
     background: transparent;
     outline: none;
@@ -95,15 +95,18 @@ label{
     border: none;
     border-bottom: 2px solid white;
     border-radius: 0px 0px 3px 10px;
-    height: 30px;
+    height: 25px;
     font-size: 16px;
     margin-bottom: 13px;
+    text-indent: 3px;
 }
 
 .cadastro input[name="telefone"]{
     margin-right: 130px;
 
 }
+
+
 .cadastro input[type="tel"], .cadastro input[type="password"]{
     background: transparent;
     outline: none;
@@ -111,13 +114,30 @@ label{
     border: none;
     border-bottom: 2px solid white;
     border-radius: 0px 0px 3px 10px;
-    height: 30px;
-    padding: 2px;
+    height: 22px;
+    padding: 5px;
     font-size: 16px;
     margin-top: 2px;
     margin-bottom: 13px;
+    padding-bottom: 0px;
 }
 
+.cadastro input[name="cpf"]{
+    background: transparent;
+    outline: none;
+    width: 35%;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0px 0px 3px 10px;
+    height: 22px;
+    font-size: 16px;
+    margin-bottom: 13px;
+    padding-bottom: 0px;
+}
+
+#lb_n, #lb_e{
+
+}
 .cadastro input[name="senha"], .cadastro input[name="confirma_senha"]{
     margin-bottom: 2px;
 }
@@ -159,7 +179,7 @@ button{
     position: relative;
     left: 55%;
     padding: 10px 35px 10px 35px;
-    margin-top: 40px;
+    margin-top: 10px;
     border: none;
     outline: none;
     font-weight: bold;
@@ -171,7 +191,6 @@ button{
 
 a{
     text-decoration: none;
-
 }
 
 button:hover{

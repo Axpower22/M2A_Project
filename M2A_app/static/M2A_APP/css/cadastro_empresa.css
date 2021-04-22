@@ -1,0 +1,232 @@
+body{
+    margin:0;
+    padding:0;
+    background: #ebebeb;
+    background-image: linear-gradient(90deg, rgba(235, 235, 235),rgba(0, 73, 118), rgba(196,196, 196));
+    font-family: "Comfortaa", "Arial", sans-serif;
+}
+
+body, html{
+    height: 100%;
+}
+
+.container{
+    position: relative;
+    height: 1680px;
+    width: 100%;
+}
+
+body::-webkit-scrollbar{
+     width: 7px;
+     background-color: #C4C4C4;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #004976;
+    border-radius: 100px 100px 100px 100px;
+}
+
+#logo{
+    padding: 40px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.cadastro{
+    width: 780px;
+    height: 1400px;
+    border: 2px solid #C4C4C4;
+    border-radius: 60px 60px 60px 60px;
+    color: #fff;
+    background-color: #C4C4C4;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 32px 28px;
+    box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 15px;
+    padding-left: 0;
+    color: #00497D;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+h2{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 15px;
+    color: #004976;
+    font-size: 25px;
+}
+
+.cadastro label{
+    color: #000;
+}
+
+#lb_insc_estadual{
+    width: 100%;
+    text-align: left;
+    margin-left: 29%;
+}
+
+#lb_check_master{
+    margin-left: 18%;
+}
+
+#lb_cnpj{
+    margin-right: 2%;
+}
+
+.cadastro input{
+    padding: 3px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid white;
+    border-radius: 0px 0px 3px 10px;
+    margin-bottom: 15px;
+    text-indent: 3px;
+    font-size: 16px;
+}
+
+#id_cnpj{
+    width: 27%;
+}
+
+#id_insc_estadual{
+    width: 30%;
+    margin-left: 70px;
+}
+
+#id_check_master{
+    margin-left: 19%;
+}
+
+#lb_select_master{
+    margin-left: 66%;
+}
+
+#id_nome_fantasia{
+    width: 68.4%;
+
+}
+
+#id_razao{
+    width: 98%;
+}
+
+#lb_tel_empresa{
+    margin-right: 15%;
+}
+#lb_cel_empresa{
+    margin-right: 16%;
+}
+#lb_fax{
+    margin-right: 20%;
+}
+
+#id_tel_empresa{
+    width: 21%;
+
+}
+
+#id_cel_empresa{
+    width: 21%;
+    margin-left: 3%;
+}
+
+#id_fax{
+    width: 21%;
+    margin-left: 3%;
+}
+
+#id_cep{
+    width:21.5%;
+    margin-left: 3%;
+}
+
+#lb_end{
+    margin-right: 39%;
+}
+
+#id_endereco{
+    width: 47%;
+}
+
+#id_bairro{
+    width: 47%;
+    margin-left: 2.5%;
+}
+
+#id_complemento{
+    width: 98%;
+}
+
+#lb_cid{
+    margin-left: 15%;
+}
+
+#lb_estado{
+    margin-left: 34%;
+
+}
+
+
+#id_cidade{
+    margin-left: 15%;
+
+}
+
+.cadastro select{
+    margin-left: 15%;
+
+}
+.cadastro select{
+    margin-left: 8%;
+    background: #ebebeb;
+    border: none;
+    overflow: hidden;
+    border-radius: 14px 14px 14px 14px;
+    outline: none;
+    color: black;
+    padding: 5px;
+    font-family: "Comfortaa", Arial, sans-serif;
+    height: 30px;
+    cursor: pointer;
+}
+
+.cadastro select[name="select_master"]:hover{
+    background-color: #ebebeb;
+    opacity: 0.8;
+    transition: .2s;
+}
+
+option{
+    background-color: #C4C4C4;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background: #7C7C7C;
+    font-size: 12.9px;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 1px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+}

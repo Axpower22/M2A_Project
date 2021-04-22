@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_empresa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_empresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_empresa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_usuario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_usuario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +19,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Murillo" />
         <option value="Murillo &lt;giikthelol@gmail.com&gt;" />
       </list>
     </option>
@@ -43,14 +46,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/M2A_app/static/M2A_APP/img" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static\M2A_APP\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static\M2A_APP\img" />
       <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static\M2A_APP" />
       <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static" />
       <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\Imagens" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Murillo\PycharmProjects\PI7_PIHM\M2A_app\static\M2A_APP\img" />
     </key>
   </component>
   <component name="RunManager" selected="Python.atv_2">
@@ -135,24 +138,32 @@
       <option name="project" value="LOCAL" />
       <updated>1618939077708</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implementação em 90% do html/css de cadastro_u">
+      <created>1619116006659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619116006659</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tela Login parcialmente criada&#10;Alteração em diretórios&#10;Criação da static" />
     <MESSAGE value="Implementação da logo original + favicon e alteração para dores melhores e mais suaves" />
     <MESSAGE value="Implementação do inicio de cadastro_usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação do inicio de cadastro_usuario" />
+    <MESSAGE value="Implementação em 90% do html/css de cadastro_u" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação em 90% do html/css de cadastro_u" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618740709547" />
-    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1618939074383">
+    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1619116003720">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1618939074383" />
+    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619116003720" />
     <state width="1579" height="257" key="GridCell.Tab.0.bottom" timestamp="1618314619777">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -185,17 +196,21 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1579" height="254" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1618939104192">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1619116012252">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1618939104192" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1619108759231">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619116012252" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1619374347879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1619108759231" />
-    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618954661802">
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1619374347879" />
+    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619129916662">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1618954661802" />
+    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1619129916662" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1619159610007">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1619159610007" />
   </component>
 </project>

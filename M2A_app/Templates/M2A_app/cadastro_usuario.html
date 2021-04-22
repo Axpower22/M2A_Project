@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <title>Cadastro Usuário</title>
+        <script src="{% static 'M2A_app/js/dist/inputmask.js' %}"></script>
     </head>
 
     <body>
@@ -59,18 +60,31 @@
                 </select>
 
                 <br><br>
-                <label>Nome*:</label>
+
+                <label id="lb_n">Nome*:</label>
                 <input type="text" name="nome" autocomplete="off">
+
                 <br>
-                <label>E-mail*:</label>
-                <input type="text" name="nome" autocomplete="off">
+
+                <label id="lb_e">E-mail*:</label>
+                <input type="text" name="email" autocomplete="off">
+
                 <br>
+
                 <label id="l_tel">Telefone:</label><label id="l_c">Celular*:</label><br>
-                <input type="tel" name="telefone" placeholder="(00) 0000-0000" autocomplete="off">
-                <input type="tel" name="celular" placeholder="(00) 00000-0000" autocomplete="off">
+                <input id="tel" type="tel" name="telefone" placeholder="(__) ____-____" autocomplete="off">
+                <input id="cel" type="tel" name="celular" placeholder="(__) _____-____" autocomplete="off">
+
                 <br>
-                <label id="l_s">Senha*:</label><label id="l_cs">Confirmação de Senha*:</label><br>
+
+                <label id="l_s">Senha*:</label><label id="l_cs">CPF*:</label><br>
                 <input type="password" name="senha" autocomplete="off">
+                <input type="text" name="cpf" autocomplete="off" maxlength="11">
+
+                <br>
+
+                <label id="lb_cs">Confirmação de Senha*:</label>
+                <br>
                 <input type="password" name="confirma_senha" autocomplete="off">
             </form>
 
@@ -80,5 +94,6 @@
         </div>
 
         <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+        <script src="{% static 'M2A_app/js/main.js' %}"></script>
     </body>
 </html>

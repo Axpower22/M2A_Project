@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from M2A_app.views import msg_test, msg_test2, datahora, login, cadastro_usuario
+from M2A_app.views import msg_test, msg_test2, datahora, login, cadastro_usuario, cadastro_empresa
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,6 @@ urlpatterns = [
     path('data/', datahora),
     path('login/', login),
     path('cadastro_usuario/', cadastro_usuario),
+    path('cadastro_empresa/', cadastro_empresa),
+
 ]

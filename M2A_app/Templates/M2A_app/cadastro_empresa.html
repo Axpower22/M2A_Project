@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/cadastro_empresa.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+
+        <title>Cadastro de Empresa</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+            <div class="cadastro">
+                <h1>Cadastro de Empresa</h1>
+                <h2>Dados da Empresa</h2>
+                <form autocomplete="off">
+                    <label id="lb_cnpj">CNPJ:</label>
+                    <label id="lb_insc_estadual">Inscrição Estadual:</label>
+                    <label id="lb_check_master">É Cliente Master?</label>
+
+                    <br>
+
+                    <input id="id_cnpj" type="text" name="cnpj" autocomplete="off" maxlength="14">
+
+                    <input id="id_insc_estadual" type="text" name="inscricao" autocomplete="off">
+
+                    <input id="id_check_master" type="checkbox" name="check_master">
+
+                    <br>
+
+                    <label id="lb_nome_fantasia">Nome Fantasia:</label>
+                    <label id="lb_select_master">Master</label>
+
+                    <br>
+
+                    <input id="id_nome_fantasia" type="text" name="nome_fantasia" autocomplete="off">
+
+                    <select id="select_master" name="select_master" disabled>
+                        <option value="" hidden>Selecione</option>
+                        <option value="1">Cliente</option>
+                        <option value="2">Cliente Master</option>
+                        <option value="3">Consultor</option>
+                        <option value="4">Consultor Master</option>
+                    </select>
+
+                    <br>
+
+                    <label id="lb_razao">Razão Social:</label>
+
+                    <br>
+
+                    <input id="id_razao" type="text" name="razao" autocomplete="off">
+
+                    <br>
+
+                    <label id="lb_tel_empresa">Telefone:</label>
+                    <label id="lb_cel_empresa">Celular:</label>
+                    <label id="lb_fax">Fax:</label>
+                    <label id="lb_cep">Cep:</label>
+
+                    <br>
+
+                    <input id="id_tel_empresa" type="tel" name="tel_empresa" autocomplete="off">
+
+                    <input id="id_cel_empresa" type="tel" name="cel_empresa" autocomplete="off">
+
+                    <input id="id_fax" type="text" name="fax" autocomplete="off">
+
+                    <input id="id_cep" type="text" name="cep" autocomplete="off">
+
+                    <br>
+
+                    <label id="lb_end">Endereço:</label>
+                    <label id="lb_bairro">Bairro:</label>
+
+                    <br>
+
+                    <input id="id_endereco" type="text" name="endereco" autocomplete="off">
+
+                    <input id="id_bairro" type="text" name="fax" autocomplete="off">
+
+                    <br>
+
+                    <label id="lb_comp">Complemento:</label>
+
+                    <input id="id_complemento" type="text" name="complemento" autocomplete="off">
+
+                    <br>
+
+                    <label id="lb_cid">Cidade:</label>
+                    <label id="lb_estado">Estado/UF</label>
+
+                    <br>
+
+                    <input id="id_cidade" type="text" name="cidade" autocomplete="off">
+
+                    <select name="estado">
+                        <option value="" hidden>Selecione</option>
+                        <option value="AC">AC-Acre</option>
+                        <option value="AL">AL-Alagoas</option>
+                        <option value="AP">AP-Amapá</option>
+                        <option value="AM">AM-Amazonas</option>
+                        <option value="BA">BA-Bahia</option>
+                        <option value="CE">CE-Ceará</option>
+                        <option value="DF">DF-Distrito Federal</option>
+                        <option value="ES">ES-Espírito Santo</option>
+                        <option value="GO">GO-Goiás</option>
+                        <option value="MA">MA-Maranhão</option>
+                        <option value="MT">MT-Mato Grosso</option>
+                        <option value="MS">MS-Mato Grosso do Sul</option>
+                        <option value="MG">MG-Minas Gerais</option>
+                        <option value="PA">PA-Pará</option>
+                        <option value="PB">PB-Paraíba</option>
+                        <option value="PR">PR-Paraná</option>
+                        <option value="PE">PE-Pernambuco</option>
+                        <option value="PI">PI-Piauí</option>
+                        <option value="RJ">RJ-Rio de Janeiro</option>
+                        <option value="RN">RN-Rio Grande do Norte</option>
+                        <option value="RS">RS-Rio Grande do Sul</option>
+                        <option value="RO">RO-Rondônia</option>
+                        <option value="RR">RR-Roraima</option>
+                        <option value="SC">SC-Santa Catarina</option>
+                        <option value="SP">SP-São Paulo</option>
+                        <option value="SE">SE-Sergipe</option>
+                        <option value="TO">TO-Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+
+                </form>
+
+                <h2>Informações do Responsável</h2>
+            </div>
+
+            <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+
+        </div>
+    </body>
+
+</html>
