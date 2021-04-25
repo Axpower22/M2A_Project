@@ -10,6 +10,7 @@
         <meta charset="UTF-8">
 
         <title>Cadastro de Empresa</title>
+        <script src="{% static 'M2A_app/js/dist/inputmask.js' %}"></script>
 
     </head>
 
@@ -28,7 +29,7 @@
 
                     <br>
 
-                    <input id="id_cnpj" type="text" name="cnpj" autocomplete="off" maxlength="14">
+                    <input id="id_cnpj" type="text" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
 
                     <input id="id_insc_estadual" type="text" name="inscricao" autocomplete="off">
 
@@ -96,7 +97,7 @@
                     <br>
 
                     <label id="lb_cid">Cidade:</label>
-                    <label id="lb_estado">Estado/UF</label>
+                    <label id="lb_estado">UF/Estado</label>
 
                     <br>
 
@@ -142,6 +143,7 @@
             <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
 
         </div>
+        <script src="{% static 'M2A_app/js/main.js' %}"></script>
     </body>
 
 </html>
