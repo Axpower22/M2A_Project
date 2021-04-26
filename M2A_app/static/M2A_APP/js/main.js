@@ -20,4 +20,4 @@ imf.mask(cpf);
 var cnpj = document.getElementById("cnpj");
 
 var imj = new Inputmask("99.999.999/9999-99");
-imj.mask(cnpj);
+imj.mask(id_cnpj);

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +147,28 @@
       <option name="project" value="LOCAL" />
       <updated>1619379678648</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="coisa pa carai(inicio do cadastro_empresa e add do cpf no cadastro_usuario">
+      <created>1619379731994</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619379731994</updated>
+    </task>
+    <task id="LOCAL-00007" summary="coisa pa carai(inicio do cadastro_empresa e add do cpf no cadastro_usuario">
+      <created>1619379780160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619379780160</updated>
+    </task>
+    <task id="LOCAL-00008" summary="tentando">
+      <created>1619379979633</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619379979633</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,17 +177,22 @@
     <MESSAGE value="Implementação do inicio de cadastro_usuario" />
     <MESSAGE value="Implementação em 90% do html/css de cadastro_u" />
     <MESSAGE value="coisa pa carai(inicio do cadastro_empresa e add do cpf no cadastro_usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="coisa pa carai(inicio do cadastro_empresa e add do cpf no cadastro_usuario" />
+    <MESSAGE value="tentando" />
+    <option name="LAST_COMMIT_MESSAGE" value="tentando" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618740709547" />
-    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1619379752396">
+    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1619379976078">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619379752396" />
+    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1619379976078" />
+    <state x="152" y="68" key="DiffContextDialog" timestamp="1619379970896">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1619379970896" />
     <state width="1579" height="257" key="GridCell.Tab.0.bottom" timestamp="1618314619777">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -198,18 +225,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1579" height="254" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1618192499786" />
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1619379685253">
+    <state x="502" y="137" key="MultipleFileMergeDialog" timestamp="1619379872709">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619379685253" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1619374347879">
+    <state x="502" y="137" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1619379872709" />
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1619379985916">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1619374347879" />
-    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619129916662">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619379985916" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1619434963711">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1619129916662" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1619434963711" />
+    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619434418598">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1619434418598" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1619159610007">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
