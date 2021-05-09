@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/lista_diagnostico.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+
+        <title>Lista de Diagnósticos</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="#">Diagnósticos</a></li>
+                        <li><a href="#">Empresas</a></li>
+                        <li><a href="#">Grupos</a></li>
+                        <li><a href="#">Usuários</a></li>
+                        <li><a href="#">Respostas Automáticas</a></li>
+                        <li id="ultimo_li"><a href="#">Dados</a></li>
+                    </ul>
+                </nav>
+                <p id="logger">Olá admin<a href="#" style="margin-left: 20px;">Sair</a></p>
+            </header>
+
+            <div class="info">
+                <h1>Lista de Diagnósticos</h1>
+
+                <form autocomplete="off">
+                    <label id="lb_nf">Nome Fantasia:</label>
+
+
+                    <br>
+
+                    <input type="text" name="nome_fantasia" autocomplete="off">
+
+
+                    <br>
+
+                    <label id="lb_cidade">Cidade:</label>
+                    <label id="lb_estado">Estado:</label>
+                    <label id="lb_consultor">Consultor:</label>
+
+                    <br>
+
+                    <input type="text" name="cidade" autocomplete="off">
+
+                    <select class="selects" name="select_estado">
+                        <option hidden value="">Selecione</option>
+                        <option value="AC">AC-Acre</option>
+                        <option value="AL">AL-Alagoas</option>
+                        <option value="AP">AP-Amapá</option>
+                        <option value="AM">AM-Amazonas</option>
+                        <option value="BA">BA-Bahia</option>
+                        <option value="CE">CE-Ceará</option>
+                        <option value="DF">DF-Distrito Federal</option>
+                        <option value="ES">ES-Espírito Santo</option>
+                        <option value="GO">GO-Goiás</option>
+                        <option value="MA">MA-Maranhão</option>
+                        <option value="MT">MT-Mato Grosso</option>
+                        <option value="MS">MS-Mato Grosso do Sul</option>
+                        <option value="MG">MG-Minas Gerais</option>
+                        <option value="PA">PA-Pará</option>
+                        <option value="PB">PB-Paraíba</option>
+                        <option value="PR">PR-Paraná</option>
+                        <option value="PE">PE-Pernambuco</option>
+                        <option value="PI">PI-Piauí</option>
+                        <option value="RJ">RJ-Rio de Janeiro</option>
+                        <option value="RN">RN-Rio Grande do Norte</option>
+                        <option value="RS">RS-Rio Grande do Sul</option>
+                        <option value="RO">RO-Rondônia</option>
+                        <option value="RR">RR-Roraima</option>
+                        <option value="SC">SC-Santa Catarina</option>
+                        <option value="SP">SP-São Paulo</option>
+                        <option value="SE">SE-Sergipe</option>
+                        <option value="TO">TO-Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+
+                    <select id="consultor" name="select_consultor">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">Consultor1</option>
+                    </select>
+
+                    <br>
+                    <label id="lb_nome_projeto">Nome do projeto:</label>
+                    <label id="lb_segmento">Segmento:</label>
+                    <label id="lb_arrecadacao">Arrecadação:</label>
+
+                    <br>
+
+                    <input type="text" name="nome_propjeto">
+
+                    <select class="selects" name="select_segmento">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">??</option>
+                        <option value="2">???</option>
+                    </select>
+
+                    <select id="arrecadacao" name="select_arrecadacao">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">???</option>
+                        <option value="2">?????</option>
+                    </select>
+
+                    <br>
+
+                    <label id="lb_gestor">Gestor do Projeto:</label>
+                    <label id="lb_situacao">Situação:</label>
+                    <label id="lb_tp_empresa">Tipo de empresa:</label>
+
+                    <br>
+
+                    <input type="text" name="gestor_projeto">
+
+                    <select class="selects" name="select_situacao">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">???</option>
+                        <option value="2">?????</option>
+                    </select>
+
+                    <select id="tipo_empresa" name="select_tipo_empresa">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">??</option>
+                        <option value="2">?</option>
+                    </select>
+
+                    <br>
+
+                    <label id="lb_bairro">Bairro:</label>
+                    <label id="lb_fase">Fase do Projeto:</label>
+                    <label id="lb_ano">Ano do Projeto:</label>
+
+
+                    <br>
+
+                    <input type="text" name="bairro">
+
+                    <select class="selects" name="select_fase_projeto">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">??</option>
+                        <option value="2">?</option>
+                    </select>
+
+                    <select id="ano_projeto" name="select_ano_projeto">
+                        <option hidden value="">Selecione</option>
+                        <option value="1">??</option>
+                        <option value="2">?</option>
+                    </select>
+
+                    <br>
+                    <label id="lb_cnpj">CNPJ:</label>
+                    <label id="lb_master">Master:</label>
+
+                    <br>
+                    <input type="text" name="CNPJ" autocomplete="off">
+                    <select id="master" name="select_master">
+                        <option value="" hidden>Selecione</option>
+                        <option value="1">Cliente</option>
+                        <option value="2">Cliente Master</option>
+                        <option value="3">Consultor</option>
+                        <option value="4">Consultor Master</option>
+                    </select>
+
+                    <button id="b_limpar"><b>LIMPAR</b></button>
+                    <button><b>BUSCAR</b></button>
+
+                    <table>
+                        <caption><h2>Relatório Individual</h2></caption>
+                        <tr>
+                            <th>Empresa</th>
+                            <th>Tipo</th>
+                            <th>Consultor</th>
+                            <th>Cliente</th>
+                            <th>Simples</th>
+                            <th>Completo</th>
+                            <th>Gráficos</th>
+                            <th>Ações</th>
+                        </tr>
+                        <tr>
+                            <td>chiquinhos</td>
+                            <td>hard</td>
+                            <td>flavio</td>
+                            <td>alberto</td>
+                            <td>222</td>
+                            <td>333333</td>
+                            <td>img</td>
+                            <td>lixeira</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 60px 0px 60px 0px;"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+        </div>
+
+    </body>
+</html>

@@ -135,9 +135,6 @@ label{
     padding-bottom: 0px;
 }
 
-#lb_n, #lb_e{
-
-}
 .cadastro input[name="senha"], .cadastro input[name="confirma_senha"]{
     margin-bottom: 2px;
 }
@@ -145,9 +142,11 @@ label{
 .cadastro input[name="senha"]{
     margin-right: 130px;
 }
+
 #l_tel, #l_c{
     margin-top: 10px;
 }
+
 #l_tel{
     margin-right: 285px;
 }

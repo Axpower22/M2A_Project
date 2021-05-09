@@ -213,19 +213,28 @@ h2{
     transition: .2s;
 }
 
+select::-webkit-scrollbar{
+     width: 7px;
+     background-color: #C4C4C4;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 100px 100px 100px 100px;
+}
+
 option{
     background-color: #C4C4C4;
 }
 
 footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
     color: white;
     background: #7C7C7C;
     font-size: 12.9px;
     text-align: center;
     width: 100%;
+    position: absolute;
+    bottom: 0;
     letter-spacing: 1px;
     padding-top: 7px;
     padding-bottom: 5px;
