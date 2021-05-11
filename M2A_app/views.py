@@ -25,3 +25,6 @@ def cadastro_empresa(request):
 
 def lista_diagnostico(request):
     return render(request, 'M2A_app/lista_diagnostico.html')
+
+def lista_empresa(request):
+    return render(request, 'M2A_app/lista_empresa.html')
