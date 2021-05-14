@@ -31,3 +31,6 @@ def lista_empresa(request):
 
 def lista_grupo(request):
     return render(request, 'M2A_app/lista_grupo.html')
+
+def lista_usuario(request):
+    return render(request, 'M2A_app/lista_usuario.html')
