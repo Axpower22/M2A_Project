@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from M2A_app.views import msg_test, msg_test2, datahora, login, cadastro_usuario, cadastro_empresa, lista_diagnostico,\
-    lista_empresa
+    lista_empresa, lista_grupo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,7 @@ urlpatterns = [
     path('cadastro_empresa/', cadastro_empresa),
     path('lista_diagnosticos/', lista_diagnostico),
     path('lista_empresa/', lista_empresa),
+    path('lista_grupo/', lista_grupo),
 
 
 ]

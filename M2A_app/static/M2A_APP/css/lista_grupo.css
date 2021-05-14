@@ -16,7 +16,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 100px 100px 100px 100px;
 }
 
-
 .container{
     width: 100%;
     height: 100%;
@@ -109,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 
 .info{
     width: 100%;
-    height: 900px;
+    height: 499px;
 
     display: flex;
     justify-content: center;
@@ -117,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 
 .info .content{
     width: 850px;
-    height: 850px;
+    height: 350px;
     border: 2px solid #C4C4C4;
     border-radius: 30px 30px 30px 30px;
     color: #fff;
@@ -140,6 +139,17 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
 }
 
+.info .content #input_1 button{
+    margin-left: 271px;]
+
+    position: relative;
+    top: -30px;
+}
+
+.info .content label{
+    color: black;
+}
+
 .info .content input{
     padding-bottom: 0px;
     background: transparent;
@@ -154,79 +164,33 @@ body::-webkit-scrollbar-thumb {
     text-indent: 3px;
 }
 
+.info .content #button_2{
+    position: relative;
+    margin-left: 560px;
+    bottom: 30px;
+}
+
+.info .content #lb_relatorio{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .info .content label{
-    color: black;
+    margin-right: 80px;
+    margin-bottom: 2px;
+    position: relative;
 }
 
-.info .content select{
-    background: #ebebeb;
-    border: none;
-    border-radius: 14px 14px 14px 14px;
-    outline: none;
-    color: black;
-    padding: 5px;
-    margin-left: 15px;
-    font-family: "Comfortaa", Arial, sans-serif;
-    width:18%;
-    height: 30px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.info .content select:hover{
-    background-color: #ebebeb;
-    opacity: 0.8;
-    transition: .2s;
-}
-
-.info .content select::-webkit-scrollbar{
-     width: 7px;
-     background-color: #C4C4C4;
-}
-
-.info .content select::-webkit-scrollbar-thumb{
-    background-color: white;
-    border-radius: 100px 100px 100px 100px;
-}
-
-.info .content option{
-    background-color: #C4C4C4;
-}
-
-.info .content form #content_1{
+.info .content #last_button{
     width: 100%;
+
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-.info .content form #content_1 #lb_nf{
-    margin-right: 160px;
-}
-
-.info .content form #content_1 #lb_cnpj{
-    margin-right: 240px;
-}
-
-.info .content form #content_1_input{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.info .content form #content_2{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.info .content form #content_2_select{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .info .content button{
@@ -241,62 +205,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 14px;
     background: #004976;
     border-radius: 20px;
-}
-
-.info .content button:hover{
-    background: #19394D;
-    transition: .3s;
-}
-
-.info .content #button_1{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info .content #button_1 #b_limpar{
-    margin: 0 5px;
-}
-
-
-.info .content #button_2{
-    width: 100%;
-    margin-top: -26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info .content #mesa{
-    width: 100%;
-    height: 520px;
-}
-
-.info .content table{
-    width: 100%;
-    font-family: "Arial", sans-serif;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.info .content table tr th{
-    font-weight: bold;
-    color: #000;
-}
-
-.info .content table tr td{
-    padding: 20px 0px;
-    text-align: center;
-    color: #000;
-}
-
-.info .content table tr th, td{
-    border: 1px solid black;
-    padding: 5px;
+    text-transform: uppercase;
 }
 
 #rodape{

@@ -28,3 +28,6 @@ def lista_diagnostico(request):
 
 def lista_empresa(request):
     return render(request, 'M2A_app/lista_empresa.html')
+
+def lista_grupo(request):
+    return render(request, 'M2A_app/lista_grupo.html')
