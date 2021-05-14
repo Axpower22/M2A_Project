@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_empresa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Lista_empresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Lista_empresa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_diagnostico.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_diagnostico.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_empresa.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_empresa.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620548200790</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="criação da tela de lista de empresa">
+      <created>1620755845782</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620755845782</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -199,17 +203,18 @@
     <MESSAGE value="tentando" />
     <MESSAGE value="att_js_test" />
     <MESSAGE value="parte da tela de lista de diagnosticos/cadastro_empresa" />
-    <option name="LAST_COMMIT_MESSAGE" value="parte da tela de lista de diagnosticos/cadastro_empresa" />
+    <MESSAGE value="criação da tela de lista de empresa" />
+    <option name="LAST_COMMIT_MESSAGE" value="criação da tela de lista de empresa" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618740709547" />
-    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1620755821757">
+    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1620755842819">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620755821757" />
+    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620755842819" />
     <state x="152" y="68" key="DiffContextDialog" timestamp="1619379970896">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -254,14 +259,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="502" y="137" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1619379872709" />
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620548207196">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1620755849493">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1620548207196" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1620720996861">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1620755849493" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1620977867278">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1620720996861" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1620977867278" />
     <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619435421566">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

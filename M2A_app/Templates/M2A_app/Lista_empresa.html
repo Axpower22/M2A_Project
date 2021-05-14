@@ -12,123 +12,147 @@
     <body>
         <div class="container">
             <header>
-                <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
-                <nav>
+
+                <div class="header_top">
+                    <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+                </div>
+
+                <div class="header_middle">
+                    <span id="logger">Olá admin<a href="#" style="margin-left: 20px;">Sair</a></span>
+                </div>
+
+                <nav class="header_bottom">
                     <ul class="nav_links">
                         <li><a href="#">Diagnósticos</a></li>
+                        <span class="dividir"></span>
                         <li><a href="#">Empresas</a></li>
+                        <span class="dividir"></span>
                         <li><a href="#">Grupos</a></li>
+                        <span class="dividir"></span>
                         <li><a href="#">Usuários</a></li>
+                        <span class="dividir"></span>
                         <li><a href="#">Respostas Automáticas</a></li>
-                        <li id="ultimo_li"><a href="#">Dados</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Dados</a></li>
                     </ul>
                 </nav>
-                <p id="logger">Olá admin<a href="#" style="margin-left: 20px;">Sair</a></p>
+
             </header>
-
             <div class="info">
-                <h1>Lista de Empresas</h1>
-                <form>
-                    <label id="lb_nf">Nome Fantasia:</label>
-                    <label id="lb_cnpj">CNPJ:</label>
+                <div class="content">
+                    <h1>Lista de Empresas</h1>
+                    <form>
+                        <div id="content_1">
+                            <label id="lb_nf">Nome Fantasia:</label>
+                            <label id="lb_cnpj">CNPJ:</label>
+                        </div>
 
-                    <br>
+                        <div id="content_1_input">
+                            <input type="text" name="nome_fantasia" autocomplete="off">
+                            <input type="text" name="cnpj" autocomplete="off">
+                        </div>
 
-                    <input type="text" name="nome_fantasia" autocomplete="off">
-                    <input type="text" name="cnpj" autocomplete="off">
+                        <div id="content_2">
+                            <label id="lb_estado">Estado:</label>
+                            <label id="lb_master">Master:</label>
+                        </div>
 
-                    <label id="lb_estado">Estado:</label>
-                    <label id="lb_master">Master:</label>
+                        <div id="content_2_select">
+                            <select name="estado" id="select_estado">
+                                <option value="" hidden>Selecione</option>
+                                <option value="AC">AC-Acre</option>
+                                <option value="AL">AL-Alagoas</option>
+                                <option value="AP">AP-Amapá</option>
+                                <option value="AM">AM-Amazonas</option>
+                                <option value="BA">BA-Bahia</option>
+                                <option value="CE">CE-Ceará</option>
+                                <option value="DF">DF-Distrito Federal</option>
+                                <option value="ES">ES-Espírito Santo</option>
+                                <option value="GO">GO-Goiás</option>
+                                <option value="MA">MA-Maranhão</option>
+                                <option value="MT">MT-Mato Grosso</option>
+                                <option value="MS">MS-Mato Grosso do Sul</option>
+                                <option value="MG">MG-Minas Gerais</option>
+                                <option value="PA">PA-Pará</option>
+                                <option value="PB">PB-Paraíba</option>
+                                <option value="PR">PR-Paraná</option>
+                                <option value="PE">PE-Pernambuco</option>
+                                <option value="PI">PI-Piauí</option>
+                                <option value="RJ">RJ-Rio de Janeiro</option>
+                                <option value="RN">RN-Rio Grande do Norte</option>
+                                <option value="RS">RS-Rio Grande do Sul</option>
+                                <option value="RO">RO-Rondônia</option>
+                                <option value="RR">RR-Roraima</option>
+                                <option value="SC">SC-Santa Catarina</option>
+                                <option value="SP">SP-São Paulo</option>
+                                <option value="SE">SE-Sergipe</option>
+                                <option value="TO">TO-Tocantins</option>
+                                <option value="EX">Estrangeiro</option>
+                            </select>
 
-                    <br>
+                            <select id="master" name="select_master">
+                                <option value="" hidden>Selecione</option>
+                                <option value="1">Cliente</option>
+                                <option value="2">Cliente Master</option>
+                                <option value="3">Consultor</option>
+                                <option value="4">Consultor Master</option>
+                            </select>
+                        </div>
+                    </form>
 
-                    <select name="estado" id="select_estado">
-                        <option value="" hidden>Selecione</option>
-                        <option value="AC">AC-Acre</option>
-                        <option value="AL">AL-Alagoas</option>
-                        <option value="AP">AP-Amapá</option>
-                        <option value="AM">AM-Amazonas</option>
-                        <option value="BA">BA-Bahia</option>
-                        <option value="CE">CE-Ceará</option>
-                        <option value="DF">DF-Distrito Federal</option>
-                        <option value="ES">ES-Espírito Santo</option>
-                        <option value="GO">GO-Goiás</option>
-                        <option value="MA">MA-Maranhão</option>
-                        <option value="MT">MT-Mato Grosso</option>
-                        <option value="MS">MS-Mato Grosso do Sul</option>
-                        <option value="MG">MG-Minas Gerais</option>
-                        <option value="PA">PA-Pará</option>
-                        <option value="PB">PB-Paraíba</option>
-                        <option value="PR">PR-Paraná</option>
-                        <option value="PE">PE-Pernambuco</option>
-                        <option value="PI">PI-Piauí</option>
-                        <option value="RJ">RJ-Rio de Janeiro</option>
-                        <option value="RN">RN-Rio Grande do Norte</option>
-                        <option value="RS">RS-Rio Grande do Sul</option>
-                        <option value="RO">RO-Rondônia</option>
-                        <option value="RR">RR-Roraima</option>
-                        <option value="SC">SC-Santa Catarina</option>
-                        <option value="SP">SP-São Paulo</option>
-                        <option value="SE">SE-Sergipe</option>
-                        <option value="TO">TO-Tocantins</option>
-                        <option value="EX">Estrangeiro</option>
-                </select>
+                    <div id="button_1">
+                        <button id="b_limpar"><b>LIMPAR</b></button>
+                        <button id="b_buscar"><b>BUSCAR</b></button>
+                    </div>
 
-                    </select>
-                    <select id="master" name="select_master">
-                        <option value="" hidden>Selecione</option>
-                        <option value="1">Cliente</option>
-                        <option value="2">Cliente Master</option>
-                        <option value="3">Consultor</option>
-                        <option value="4">Consultor Master</option>
-                    </select>
-                </form>
+                    <div id="button_2">
+                        <button id="cadastrar"><b>CADASTRAR</b></button>
+                    </div>
 
-                <button id="b_limpar"><b>LIMPAR</b></button>
-                <button><b>BUSCAR</b></button>
-                <br>
-                <button id="cadastrar"><b>CADASTRAR</b></button>
-
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Empresa vinculada(Master)</th>
-                        <th>Cliente</th>
-                        <th>Estado</th>
-                        <th>Ações</th>
-                    </tr>
-                    <tr>
-                        <td>chiquinhos</td>
-                        <td>xpinvestimentos</td>
-                        <td>flavio</td>
-                        <td>aberto</td>
-                        <td>lixeira</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 60px 0px 60px 0px;"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 60px 0px 60px 0px;"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 60px 0px 60px 0px;"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-
+                    <div id="mesa">
+                        <table>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Empresa vinculada(Master)</th>
+                                <th>Cliente</th>
+                                <th>Estado</th>
+                                <th>Ações</th>
+                            </tr>
+                            <tr>
+                                <td>chiquinhos</td>
+                                <td>xpinvestimentos</td>
+                                <td>flavio</td>
+                                <td>aberto</td>
+                                <td>lixeira</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 60px 0px 60px 0px;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 60px 0px 60px 0px;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 60px 0px 60px 0px;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-        <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+        <div id="rodape">
+            <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+        </div>
         </div>
     </body>
 </html>
