@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 
 .info{
     width: 100%;
-    height: 499px;
+    height: 533px;
 
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 
 .info .content{
     width: 850px;
-    height: 350px;
+    height: 450px;
     border: 2px solid #C4C4C4;
     border-radius: 30px 30px 30px 30px;
     color: #fff;
@@ -139,13 +139,6 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
 }
 
-.info .content #input_1 button{
-    margin-left: 271px;]
-
-    position: relative;
-    top: -30px;
-}
-
 .info .content label{
     color: black;
 }
@@ -154,7 +147,7 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 0px;
     background: transparent;
     outline: none;
-    width: 37%;
+    width: 30%;
     border: none;
     border-bottom: 2px solid white;
     border-radius: 0px 0px 3px 10px;
@@ -164,39 +157,105 @@ body::-webkit-scrollbar-thumb {
     text-indent: 3px;
 }
 
-.info .content #button_2{
-    position: relative;
-    margin-left: 560px;
-    bottom: 30px;
+.info .content select{
+    background: #ebebeb;
+    border: none;
+    border-radius: 14px 14px 14px 14px;
+    outline: none;
+    color: black;
+    padding: 5px;
+    margin-left: 15px;
+    font-family: "Comfortaa", Arial, sans-serif;
+    width:18%;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.info .content #lb_relatorio{
-    width: 100%;
+.info .content select:hover{
+    background-color: #ebebeb;
+    opacity: 0.8;
+    transition: .2s;
+}
 
+.info .content select::-webkit-scrollbar{
+     width: 7px;
+     background-color: #C4C4C4;
+}
+
+.info .content select::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 100px 100px 100px 100px;
+}
+
+.info .content option{
+    background-color: #C4C4C4;
+}
+
+
+.info .content form #label_line_1{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-around;
 }
 
-.info .content label{
-    margin-right: 80px;
-    margin-bottom: 2px;
-    position: relative;
+.info .content form #label_line_1 #lb_perfil{
+    margin-left: 21px;
 }
 
-.info .content #last_button{
+.info .content form #input_1{
     width: 100%;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+
+    padding: 5px 0px 20px 0px;
 }
 
-.info .content button{
+.info .content form #label_line_2{
+    width: 100%;
+}
+
+.info .content form #label_line_2 #lb_telefone{
+    margin-left: 14%;
+}
+
+.info .content form #label_line_2 #lb_celular{
+    margin-left: 24.5%;
+}
+
+.info .content form #input_2 input[type="tel"]{
+    margin-left: 3%;
+}
+
+.info .content form #input_2{
+    width: 100%;
+    padding: 0px 0px 11px 0px;
+}
+
+.info .content form #label_line_3{
+    width: 100%;
+}
+
+.info .content form #label_line_3 #lb_senha{
+    margin-left: 14%;
+}
+
+.info .content form #label_line_3 #lb_confirm_senha{
+    margin-left: 26%;
+}
+
+.info .content form #input_3 input[type="password"]{
+    margin-left: 3%;
+}
+
+button{
     cursor: pointer;
     color: white;
     position: relative;
+    left: 70%;
+    bottom: -50px;
     padding: 10px 35px 10px 35px;
     border: none;
     outline: none;
@@ -205,17 +264,20 @@ body::-webkit-scrollbar-thumb {
     font-size: 14px;
     background: #004976;
     border-radius: 20px;
-    text-transform: uppercase;
 }
 
-.info .content button:hover{
+a{
+    text-decoration: none;
+}
+
+button:hover{
     background: #19394D;
     transition: .3s;
 }
 
 #rodape{
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 
     display: flex;

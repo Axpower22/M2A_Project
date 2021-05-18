@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/lista_respostas.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Lista de Empresas</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="header_top">
+                    <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+                </div>
+
+                <div class="header_middle">
+                    <span id="logger">Olá admin<a href="#" style="margin-left: 20px;">Sair</a></span>
+                </div>
+
+                <nav class="header_bottom">
+                    <ul class="nav_links">
+                        <li><a href="#">Diagnósticos</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Empresas</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Grupos</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Usuários</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Respostas Automáticas</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Dados</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="info">
+                <div class="content">
+                    <h1>Lista de Respostas Automáticas</h1>
+                    <div id="label_1">
+                        <label>Pergunta:</label>
+                    </div>
+                    <div id="input_1">
+                        <form>
+                            <input id="n_grupo" type="text" autocomplete="off">
+                            <button>Buscar</button>
+                        </form>
+                    </div>
+                    <div id="mesa">
+                        <table>
+                            <tr>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Perfil</th>
+                                <th>Situação</th>
+                                <th>Ações</th>
+                            </tr>
+                            <tr>
+                                <td>João</td>
+                                <td>askjdkasjk@gmail.com</td>
+                                <td>estável</td>
+                                <td>aberta</td>
+                                <td>lixeira</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 60px 0px 60px 0px;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 60px 0px 60px 0px;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 60px 0px 60px 0px;"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="rodape">
+                <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+            </div>
+        </div>
+    </body>
+</html>

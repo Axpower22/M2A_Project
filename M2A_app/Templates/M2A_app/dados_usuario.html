@@ -2,11 +2,11 @@
 <html lang="pt-BR" dir="ltr">
     <head>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'M2A_app/css/lista_usuario.css' %}">
+        <link rel="stylesheet" href="{% static 'M2A_app/css/dados_usuario.css' %}">
         <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
-        <title>Lista de Empresas</title>
+        <title>Dados do Usuário</title>
     </head>
 
     <body>
@@ -40,25 +40,20 @@
             </header>
             <div class="info">
                 <div class="content">
-                    <h1>Lista de Usuários</h1>
+                    <h1>Dados do Usuário</h1>
                     <form>
-                        <div id="content_1">
-                            <label id="lb_nf">Nome do Usuário:</label>
-                            <label id="lb_cnpj">E-mail:</label>
+                        <div id="label_line_1">
+                            <label id="lb_perfil">Perfil:</label>
+                            <label id="lb_estado">Estado/UF:</label>
+                            <label id="lb_situacao">Situação:</label>
                         </div>
 
-                        <div id="content_1_input">
-                            <input type="text" name="nome_fantasia" autocomplete="off">
-                            <input type="text" name="cnpj" autocomplete="off">
-                        </div>
+                        <div id="input_1">
+                            <select id="select_perfil" name="perfil">
+                                <option hidden value="">Selecione</option>
+                            </select>
 
-                        <div id="content_2">
-                            <label id="lb_estado">Estado:</label>
-                            <label id="lb_master">Perfil:</label>
-                        </div>
-
-                        <div id="content_2_select">
-                            <select name="estado" id="select_estado">
+                            <select id="select_estado" name="estado">
                                 <option value="" hidden>Selecione</option>
                                 <option value="AC">AC-Acre</option>
                                 <option value="AL">AL-Alagoas</option>
@@ -90,63 +85,38 @@
                                 <option value="EX">Estrangeiro</option>
                             </select>
 
-                            <select id="master" name="select_master">
-                                <option value="" hidden>Selecione</option>
-                                <option value="1">???</option>
-                                <option value="2">????</option>
-                                <option value="3">????</option>
-                                <option value="4">???</option>
+                            <select id="select_situacao" name="situacao">
+                                <option hidden value="">Selecione</option>
                             </select>
                         </div>
+
+                        <div id="label_line_2">
+                            <label id="lb_nome_usuario">Nome do Usuário:</label>
+                            <label id="lb_telefone">Telefone:</label>
+                            <label id="lb_celular">Celular:</label>
+                        </div>
+
+                        <div id="input_2">
+                            <input type="text" autocomplete="off">
+                            <input type="tel" autocomplete="off" placeholder="">
+                            <input type="tel" autocomplete="off" placeholder="">
+                        </div>
+
+                        <div id="label_line_3">
+                            <label id="lb_email_usuario">E-mail do Usuário:</label>
+                            <label id="lb_senha">Senha:</label>
+                            <label id="lb_confirm_senha">Confirmação de senha:</label>
+                        </div>
+
+                        <div id="input_3">
+                            <input type="email" autocomplete="off">
+                            <input type="password" autocomplete="off">
+                            <input type="password" autocomplete="off">
+                        </div>
                     </form>
-
-                    <div id="button_1">
-                        <button id="b_limpar"><b>LIMPAR</b></button>
-                        <button id="b_buscar"><b>BUSCAR</b></button>
-                    </div>
-
-                    <div id="button_2">
-                        <button id="cadastrar"><b>CADASTRAR</b></button>
-                    </div>
-
-                    <div id="mesa">
-                        <table>
-                            <tr>
-                                <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Perfil</th>
-                                <th>Situação</th>
-                                <th>Ações</th>
-                            </tr>
-                            <tr>
-                                <td>João</td>
-                                <td>askjdkasjk@gmail.com</td>
-                                <td>estável</td>
-                                <td>aberta</td>
-                                <td>lixeira</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 60px 0px 60px 0px;"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 60px 0px 60px 0px;"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 60px 0px 60px 0px;"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
+                    <div id="buttons">
+                        <a href="#"><button><b>Voltar</b></button></a>
+                        <button><b>Salvar</b></button>
                     </div>
                 </div>
             </div>

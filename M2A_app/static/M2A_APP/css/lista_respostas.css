@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 
 .info{
     width: 100%;
-    height: 499px;
+    height: 900px;
 
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 
 .info .content{
     width: 850px;
-    height: 350px;
+    height: 850px;
     border: 2px solid #C4C4C4;
     border-radius: 30px 30px 30px 30px;
     color: #fff;
@@ -140,10 +140,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .info .content #input_1 button{
-    margin-left: 271px;]
+    margin-left: 271px;
 
     position: relative;
-    top: -30px;
+    top: -8px;
 }
 
 .info .content label{
@@ -162,35 +162,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 16px;
     margin-bottom: 13px;
     text-indent: 3px;
-}
-
-.info .content #button_2{
-    position: relative;
-    margin-left: 560px;
-    bottom: 30px;
-}
-
-.info .content #lb_relatorio{
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.info .content label{
-    margin-right: 80px;
-    margin-bottom: 2px;
-    position: relative;
-}
-
-.info .content #last_button{
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .info .content button{
@@ -213,9 +184,39 @@ body::-webkit-scrollbar-thumb {
     transition: .3s;
 }
 
+.info .content #mesa{
+    width: 100%;
+    height: 520px;
+}
+
+.info .content table{
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.info .content table tr th{
+    font-weight: bold;
+    color: #000;
+}
+
+.info .content table tr td{
+    padding: 20px 0px;
+    text-align: center;
+    color: #000;
+}
+
+.info .content table tr th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
 #rodape{
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
 
     display: flex;
@@ -235,3 +236,4 @@ body::-webkit-scrollbar-thumb {
     padding-top: 7px;
     padding-bottom: 5px;
 }
+
