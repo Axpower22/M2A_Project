@@ -40,3 +40,6 @@ def lista_respostas(request):
 
 def dados_usuario(request):
     return render(request, 'M2A_app/dados_usuario.html')
+
+def graficos(request):
+    return render(request, 'M2A_app/graficos.html')
