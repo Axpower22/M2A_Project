@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/cadastro_respostas.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Cadastro de Perguntas</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+
+                <div class="header_top">
+                    <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+                </div>
+
+                <div class="header_middle">
+                    <span id="logger">Olá admin<a href="#" style="margin-left: 20px;">Sair</a></span>
+                </div>
+
+                <nav class="header_bottom">
+                    <ul class="nav_links">
+                        <li><a href="#">Diagnósticos</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Empresas</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Grupos</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Usuários</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Respostas Automáticas</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="#">Dados</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+            <div class="info">
+                <div class="content">
+                    <h1>Cadastro de Respostas</h1>
+                    <form>
+                        <div class="labels">
+                            <label class="lb_respostas">Pergunta:</label>
+                            <label class="lb_valores">Valor:</label>
+                        </div>
+
+                        <div class="inputs_um">
+                            <input class="inputs" type="text" name="resposta_1" autocomplete="off">
+                            <input class="inputs_number" type="number" name="valor_1" autocomplete="off">
+                        </div>
+
+                        <div class="labels">
+                            <label class="lb_respostas">Pergunta:</label>
+                            <label class="lb_valores">Valor:</label>
+                        </div>
+
+                        <div class="inputs_um">
+                            <input class="inputs" type="text" name="resposta_1" autocomplete="off">
+                            <input class="inputs_number" type="number" type="number" name="valor_1" autofocus>
+                        </div>
+                    </form>
+                    <div id="buttons">
+                        <a href="#"><button><b>Voltar</b></button></a>
+                        <button><b>Salvar</b></button>
+                    </div>
+                </div>
+            </div>
+            <div id="rodape">
+                <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+            </div>
+        </div>
+    </body>
+</html>

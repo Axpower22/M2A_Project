@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'M2A_app/css/registro_grupo.css' %}">
+        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Registro de Grupo</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+
+                <div class="header_top">
+                    <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
+                </div>
+
+                <div class="header_middle">
+                    <span id="logger">Olá admin<a href="#" style="margin-left: 20px;">Sair</a></span>
+                </div>
+
+                <nav class="header_bottom">
+                    <ul class="nav_links">
+                        <li><a href="/lista_diagnosticos">Diagnósticos</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="/lista_empresa">Empresas</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="/lista_grupo">Grupos</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="/lista_usuario">Usuários</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="/lista_respostas">Respostas Automáticas</a></li>
+                        <span class="dividir"></span>
+                        <li><a href="/dados_usuario">Dados</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+            <div class="info">
+                <div class="content">
+                    <h1>Cadastro de Grupo</h1>
+                    <div class="content_um">
+                        <label id="lb_grupo">Cadastro de Grupo:</label>
+                        <label id="lb_empresa_grupo">Empresas do Grupo:</label>
+                    </div>
+
+                    <div class="input_grupo">
+                        <input type="text" name="grupo" autocomplete="off">
+                        <select>
+                            <option hidden value="">Selecione</option>
+                            <option value="1">??</option>
+                            <option value="2">???</option>
+                        </select>
+                    <div class="buttons">
+                        <button id="b_voltar"><b>VOLTAR</b></button>
+                        <button id="b_salvar"><b>SALVAR</b></button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rodape">
+                <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
+            </div>
+        </div>
+    </body>
+</html>

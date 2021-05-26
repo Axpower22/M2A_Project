@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 
 .info{
     width: 100%;
-    height: 900px;
+    height: 533px;
 
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 
 .info .content{
     width: 850px;
-    height: 850px;
+    height: 450px;
     border: 2px solid #C4C4C4;
     border-radius: 30px 30px 30px 30px;
     color: #fff;
@@ -139,22 +139,15 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
 }
 
-.info .content #input_1 button{
-    margin-left: 271px;
-
-    position: relative;
-    top: -8px;
-}
-
 .info .content label{
     color: black;
 }
 
-.info .content input{
+.info .content .inputs{
     padding-bottom: 0px;
     background: transparent;
     outline: none;
-    width: 37%;
+    width: 50%;
     border: none;
     border-bottom: 2px solid white;
     border-radius: 0px 0px 3px 10px;
@@ -164,10 +157,68 @@ body::-webkit-scrollbar-thumb {
     text-indent: 3px;
 }
 
-.info .content button{
+.info .content .inputs_number{
+    padding-bottom: 0px;
+    background: transparent;
+    outline: none;
+    width: 10%;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0px 0px 3px 10px;
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 13px;
+    text-indent: 3px;
+}
+
+.info .content .inputs_number::-webkit-inner-spin-button{
+    all: unset;
+    min-width: 21px;
+    min-height: 45px;
+    margin: 17px;
+    padding: 0px;
+    background-image:
+    linear-gradient(to top, transparent 0px, transparent 16px, #C4C4C4 16px, #C4C4C4 26px, transparent 26px, transparent 35px, #000 35px,#000 36px,transparent 36px, transparent 40px),
+    linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+    transform: rotate(90deg) scale(0.8, 0.9);
+    cursor:pointer;
+    background-color: transparent;
+}
+
+.info .content option{
+    background-color: #C4C4C4;
+}
+
+.info .content form .labels{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info .content form .inputs_um{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 5px 0px 20px 0px;
+}
+
+.info .content form .lb_respostas{
+    margin-right: 350px;
+}
+
+.info .content form .lb_valores{
+    margin-right: 20px;
+}
+
+button{
     cursor: pointer;
     color: white;
     position: relative;
+    left: 70%;
+    bottom: -50px;
     padding: 10px 35px 10px 35px;
     border: none;
     outline: none;
@@ -176,47 +227,20 @@ body::-webkit-scrollbar-thumb {
     font-size: 14px;
     background: #004976;
     border-radius: 20px;
-    text-transform: uppercase;
 }
 
-.info .content button:hover{
+a{
+    text-decoration: none;
+}
+
+button:hover{
     background: #19394D;
     transition: .3s;
 }
 
-.info .content #mesa{
-    width: 100%;
-    height: 520px;
-}
-
-.info .content table{
-    width: 100%;
-    font-family: "Arial", sans-serif;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.info .content table tr th{
-    font-weight: bold;
-    color: #000;
-}
-
-.info .content table tr td{
-    padding: 30px 0px;
-    text-align: center;
-    color: #000;
-}
-
-.info .content table tr th, td{
-    border: 1px solid black;
-    padding: 5px;
-}
-
 #rodape{
     width: 100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
 
     display: flex;
@@ -236,4 +260,3 @@ body::-webkit-scrollbar-thumb {
     padding-top: 7px;
     padding-bottom: 5px;
 }
-

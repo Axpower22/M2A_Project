@@ -16,6 +16,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 100px 100px 100px 100px;
 }
 
+
 .container{
     width: 100%;
     height: 100%;
@@ -108,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 
 .info{
     width: 100%;
-    height: 900px;
+    height: 300px;
 
     display: flex;
     justify-content: center;
@@ -116,7 +117,7 @@ body::-webkit-scrollbar-thumb {
 
 .info .content{
     width: 850px;
-    height: 850px;
+    height: 260px;
     border: 2px solid #C4C4C4;
     border-radius: 30px 30px 30px 30px;
     color: #fff;
@@ -139,17 +140,6 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
 }
 
-.info .content #input_1 button{
-    margin-left: 271px;
-
-    position: relative;
-    top: -8px;
-}
-
-.info .content label{
-    color: black;
-}
-
 .info .content input{
     padding-bottom: 0px;
     background: transparent;
@@ -164,6 +154,53 @@ body::-webkit-scrollbar-thumb {
     text-indent: 3px;
 }
 
+.info .content label{
+    color: black;
+}
+
+.info .content .content_um #lb_empresa_grupo{
+    margin-left: 50%;
+}
+
+.info .content .input_grupo select{
+    margin-left: 35%;
+}
+
+.info .content select{
+    background: #ebebeb;
+    border: none;
+    border-radius: 14px 14px 14px 14px;
+    outline: none;
+    color: black;
+    padding: 5px;
+    margin-left: 15px;
+    font-family: "Comfortaa", Arial, sans-serif;
+    width:18%;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.info .content select:hover{
+    background-color: #ebebeb;
+    opacity: 0.8;
+    transition: .2s;
+}
+
+.info .content select::-webkit-scrollbar{
+     width: 7px;
+     background-color: #C4C4C4;
+}
+
+.info .content select::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 100px 100px 100px 100px;
+}
+
+.info .content option{
+    background-color: #C4C4C4;
+}
+
 .info .content button{
     cursor: pointer;
     color: white;
@@ -176,7 +213,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 14px;
     background: #004976;
     border-radius: 20px;
-    text-transform: uppercase;
 }
 
 .info .content button:hover{
@@ -184,39 +220,21 @@ body::-webkit-scrollbar-thumb {
     transition: .3s;
 }
 
-.info .content #mesa{
+.info .content .buttons{
     width: 100%;
-    height: 520px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.info .content table{
-    width: 100%;
-    font-family: "Arial", sans-serif;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.info .content table tr th{
-    font-weight: bold;
-    color: #000;
-}
-
-.info .content table tr td{
-    padding: 30px 0px;
-    text-align: center;
-    color: #000;
-}
-
-.info .content table tr th, td{
-    border: 1px solid black;
-    padding: 5px;
+.info .content .buttons #b_salvar{
+    margin: 0 5px;
 }
 
 #rodape{
     width: 100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
 
     display: flex;
@@ -236,4 +254,3 @@ body::-webkit-scrollbar-thumb {
     padding-top: 7px;
     padding-bottom: 5px;
 }
-

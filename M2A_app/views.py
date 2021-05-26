@@ -43,3 +43,15 @@ def dados_usuario(request):
 
 def graficos(request):
     return render(request, 'M2A_app/graficos.html')
+
+def registro_grupo(request):
+    return render(request, 'M2A_app/registro_grupo.html')
+
+def cadastro_diagnostico(request):
+    return render(request, 'M2A_app/cadastro_diagnostico.html')
+
+def cadastro_respostas(request):
+    return render(request, 'M2A_app/cadastro_respostas.html')
+
+def cadastro_perguntas(request):
+    return render(request, 'M2A_app/cadastro_perguntas.html')

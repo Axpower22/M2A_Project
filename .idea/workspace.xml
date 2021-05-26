@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_perguntas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_diagnostico.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_respostas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/registro_grupo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_diagnostico.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_diagnostico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_grupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_respostas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_respostas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/registro_grupo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/graficos.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/graficos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/graficos.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/graficos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_respostas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_respostas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_respostas.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_respostas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -226,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621522020616</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="conclusão parcial tela_graficos">
+      <created>1621620130649</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621620130649</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,17 +261,18 @@
     <MESSAGE value="Criação da tela lista de usuarios" />
     <MESSAGE value="Criação de telas lista_respostas e dados_usuario" />
     <MESSAGE value="Criação parcial da tela de gráficos pq saporra é mto dificil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação parcial da tela de gráficos pq saporra é mto dificil" />
+    <MESSAGE value="conclusão parcial tela_graficos" />
+    <option name="LAST_COMMIT_MESSAGE" value="conclusão parcial tela_graficos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618740709547" />
-    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1621522016888">
+    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1621620127729">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621522016888" />
+    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621620127729" />
     <state x="152" y="68" key="DiffContextDialog" timestamp="1619379970896">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -299,14 +317,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="502" y="137" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1619379872709" />
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1621522022218">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1621620132094">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1621522022218" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1621599451353">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1621620132094" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1622032920507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1621599451353" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1622032920507" />
     <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619435421566">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
