@@ -12,6 +12,7 @@
     <body>
         <div class="container">
             <header>
+
                 <div class="header_top">
                     <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
                 </div>
@@ -22,19 +23,20 @@
 
                 <nav class="header_bottom">
                     <ul class="nav_links">
-                        <li><a href="#">Diagnósticos</a></li>
+                        <li><a href="/lista_diagnosticos">Diagnósticos</a></li>
                         <span class="dividir"></span>
-                        <li><a href="#">Empresas</a></li>
+                        <li><a href="/lista_empresa">Empresas</a></li>
                         <span class="dividir"></span>
-                        <li><a href="#">Grupos</a></li>
+                        <li><a href="/lista_grupo">Grupos</a></li>
                         <span class="dividir"></span>
-                        <li><a href="#">Usuários</a></li>
+                        <li><a href="/lista_usuario">Usuários</a></li>
                         <span class="dividir"></span>
-                        <li><a href="#">Respostas Automáticas</a></li>
+                        <li><a href="/lista_respostas">Respostas Automáticas</a></li>
                         <span class="dividir"></span>
-                        <li><a href="#">Dados</a></li>
+                        <li><a href="/dados_usuario">Dados</a></li>
                     </ul>
                 </nav>
+
             </header>
             <div class="info">
                 <div class="content">
@@ -50,7 +52,7 @@
                     </div>
 
                     <div id="button_2">
-                        <button>Cadastrar</button>
+                        <a href="/registro_grupo"><button>Cadastrar</button></a>
                     </div>
 
                     <div id="lb_relatorio">

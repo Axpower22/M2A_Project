@@ -75,17 +75,13 @@ h2{
     color: #000;
 }
 
-#lb_insc_estadual{
+#lb_email{
     width: 100%;
     text-align: left;
     margin-left: 29%;
 }
 
-#lb_check_master{
-    margin-left: 18%;
-}
-
-#lb_cnpj{
+#lb_nome{
     margin-right: 2%;
 }
 
@@ -101,100 +97,95 @@ h2{
     font-size: 16px;
 }
 
-#id_cnpj{
+#id_nome{
     width: 27%;
 }
 
-#id_insc_estadual{
+#id_email{
     width: 30%;
+    margin-left: 205px;
+}
+
+#id_data{
+    margin-left: 6.5%;
+}
+
+#lb_sexo{
+    margin-left: 10%;
+}
+
+#lb_data{
+    margin-left: 20%;
+}
+
+.separa1{
     margin-left: 70px;
 }
 
-#id_check_master{
-    margin-left: 19%;
+.separa1_input{
+    margin-left: 20px;
 }
 
-#lb_select_master{
-    margin-left: 66%;
-}
-
-#id_nome_fantasia{
-    width: 68.4%;
-
-}
-
-#id_razao{
-    width: 98%;
-}
-
-#lb_tel_empresa{
-    margin-right: 15%;
-}
-#lb_cel_empresa{
-    margin-right: 16%;
-}
-#lb_fax{
-    margin-right: 20%;
-}
-
-#id_tel_empresa{
-    width: 21%;
-
-}
-
-#id_cel_empresa{
-    width: 21%;
-    margin-left: 3%;
-}
-
-#id_fax{
-    width: 21%;
-    margin-left: 3%;
-}
-
-#id_cep{
-    width:21.5%;
-    margin-left: 3%;
-}
-
-#lb_end{
-    margin-right: 39%;
-}
-
-#id_endereco{
-    width: 47%;
-}
-
-#id_bairro{
-    width: 47%;
-    margin-left: 2.5%;
-}
-
-#id_complemento{
-    width: 98%;
-}
-
-#lb_cid{
+#select_sexo{
     margin-left: 15%;
 }
 
-#lb_estado{
-    margin-left: 34%;
-
+#select_setor{
+    width: 15%;
 }
 
+#lb_setor{
+    margin-left: 10px;
+}
+#select_segmento{
+    margin-left: 15px;
+}
 
-#id_cidade{
-    margin-left: 15%;
+#select_arrecadacao{
+    margin-left: 15px;
+}
 
+#select_tipo_empresa{
+    margin-left: 16%;
+}
+
+#lb_numero_empregados{
+    margin-left: 13%;
+}
+
+#lb_email_2{
+    margin-left: 30px;
+}
+
+#id_numero_empregados{
+    margin-left: 5%;
+}
+
+#id_email2{
+    margin-left: 5%;
+}
+
+#id_telefone{
+}
+
+#lb_gestor_projeto{
+    margin-left: 20%;
+}
+
+#lb_ano_inicio{
+    margin-left: 13%;
+}
+
+#id_gestor_projeto{
+    margin-left: 20px;
+}
+
+#id_ano_inicio{
+    margin-left: 40px;
 }
 
 .cadastro select{
-    margin-left: 15%;
-
-}
-.cadastro select{
-    margin-left: 8%;
+    width: 20%;
     background: #ebebeb;
     border: none;
     overflow: hidden;

@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef6065-61f3-45f4-87fa-1e402b79993a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_perguntas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_diagnostico.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_respostas.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/registro_grupo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_empresa_dois.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_empresa_dois.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_diagnostico.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_diagnostico.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_grupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_respostas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/Registro_respostas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/registro_grupo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_diagnostico.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_diagnostico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_empresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_empresa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_perguntas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_perguntas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_respostas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/cadastro_respostas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/dados_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/dados_usuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/graficos.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/graficos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_diagnostico.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_diagnostico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_empresas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_empresas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_grupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_grupo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_respostas.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_respostas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_respostas.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/lista_respostas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/lista_usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/Templates/M2A_app/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_empresa.css" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/static/M2A_APP/css/cadastro_empresa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/M2A_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/M2A_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +55,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../atv_1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -243,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621620130649</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="muitas telas">
+      <created>1622039005719</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1622039005719</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -262,17 +274,18 @@
     <MESSAGE value="Criação de telas lista_respostas e dados_usuario" />
     <MESSAGE value="Criação parcial da tela de gráficos pq saporra é mto dificil" />
     <MESSAGE value="conclusão parcial tela_graficos" />
-    <option name="LAST_COMMIT_MESSAGE" value="conclusão parcial tela_graficos" />
+    <MESSAGE value="muitas telas" />
+    <option name="LAST_COMMIT_MESSAGE" value="muitas telas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618740709547">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="549" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1618740709547" />
-    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1621620127729">
+    <state x="447" y="0" key="CommitChangelistDialog2" timestamp="1622039002310">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1621620127729" />
+    <state x="447" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1622039002310" />
     <state x="152" y="68" key="DiffContextDialog" timestamp="1619379970896">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -317,14 +330,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="502" y="137" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1619379872709" />
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1621620132094">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2" timestamp="1622039009408">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1621620132094" />
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1622032920507">
+    <state x="392" y="148" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1622039009408" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1623167544692">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1622032920507" />
+    <state x="471" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1623167544692" />
     <state x="602" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619435421566">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
