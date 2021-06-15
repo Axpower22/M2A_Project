@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
     <head>
-
         {% load static %}
         <link rel="stylesheet" href="{% static 'M2A_app/css/cadastro_empresa.css' %}">
         <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-
         <meta charset="UTF-8">
-
         <title>Cadastro de Empresa</title>
         <script src="{% static 'M2A_app/js/dist/inputmask.js' %}"></script>
-
     </head>
 
     <body>
         <div class="container">
-            <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable = "false" unselectable="on">
-            <div class="cadastro">
+            <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable="false" unselectable="on">
 
+            <div class="cadastro">
                 <h1>Cadastro de Empresa</h1>
                 <h2>Dados da Empresa</h2>
 
@@ -29,7 +25,7 @@
 
                     <br>
 
-                    <input id="id_cnpj" type="text" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
+                    <input id="cnpj" type="text" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
 
                     <input id="id_insc_estadual" type="text" name="inscricao" autocomplete="off">
 
@@ -69,13 +65,13 @@
 
                     <br>
 
-                    <input id="id_tel_empresa" type="tel" name="tel_empresa" autocomplete="off">
+                    <input id="tel" type="tel" name="tel_empresa" autocomplete="off" placeholder="(__) ____-____">
 
-                    <input id="id_cel_empresa" type="tel" name="cel_empresa" autocomplete="off">
+                    <input id="cel" type="tel" name="cel_empresa" autocomplete="off" placeholder="(__) _____-____">
 
-                    <input id="id_fax" type="text" name="fax" autocomplete="off">
+                    <input id="fax" type="text" name="fax" autocomplete="off" placeholder="(__) ____-____">
 
-                    <input id="id_cep" type="text" name="cep" autocomplete="off">
+                    <input id="cep" type="text" name="cep" autocomplete="off" placeholder="_____-___">
 
                     <br>
 
