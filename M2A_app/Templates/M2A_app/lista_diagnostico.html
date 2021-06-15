@@ -9,6 +9,7 @@
         <meta charset="UTF-8">
 
         <title>Lista de Diagnósticos</title>
+        <script src="{% static 'M2A_app/js/dist/inputmask.js' %}"></script>
     </head>
 
     <body>
@@ -158,7 +159,7 @@
                     <label id="lb_master">Master:</label>
 
                     <br>
-                    <input type="text" name="CNPJ" autocomplete="off">
+                    <input type="text" id="cnpj" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
                     <select id="master" name="select_master">
                         <option value="" hidden>Selecione</option>
                         <option value="1">Cliente</option>
@@ -208,5 +209,6 @@
             </div>
         <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
         </div>
+        <script src="{% static 'M2A_app/js/main.js' %}"></script>
     </body>
 </html>

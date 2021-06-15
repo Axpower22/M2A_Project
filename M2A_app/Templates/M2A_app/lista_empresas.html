@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <title>Lista de Empresas</title>
+        <script src="{% static 'M2A_app/js/dist/inputmask.js' %}"></script>
     </head>
 
     <body>
@@ -49,7 +50,7 @@
 
                         <div id="content_1_input">
                             <input type="text" name="nome_fantasia" autocomplete="off">
-                            <input type="text" name="cnpj" autocomplete="off">
+                            <input type="text" id="cnpj" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
                         </div>
 
                         <div id="content_2">
@@ -154,5 +155,6 @@
                 <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
             </div>
         </div>
+        <script src="{% static 'M2A_app/js/main.js' %}"></script>
     </body>
 </html>
