@@ -21,6 +21,7 @@ from M2A_app.views import login, cadastro_usuario, cadastro_empresa, lista_diagn
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('login/', login),
     path('cadastro_usuario/', cadastro_usuario),
     path('cadastro_empresa/', cadastro_empresa),
