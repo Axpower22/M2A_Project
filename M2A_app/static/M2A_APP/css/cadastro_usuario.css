@@ -159,19 +159,6 @@ label{
     margin-top: 10px;
 }
 
-footer{
-    color: white;
-    background: #7C7C7C;
-    font-size: 12.9px;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    letter-spacing: 1px;
-    padding-top: 7px;
-    padding-bottom: 5px;
-}
-
 button{
     cursor: pointer;
     color: white;
@@ -195,4 +182,17 @@ a{
 button:hover{
     background: #19394D;
     transition: .3s;
+}
+
+footer{
+    position: fixed;
+    color: white;
+    background: #7C7C7C;
+    font-size: 12.9px;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    letter-spacing: 1px;
+    padding-top: 7px;
+    padding-bottom: 5px;
 }

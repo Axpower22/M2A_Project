@@ -286,12 +286,12 @@ button:hover{
 }
 
 #rodape footer{
+    position: fixed;
     color: white;
     background: #7C7C7C;
     font-size: 12.9px;
     text-align: center;
     width: 100%;
-    position: absolute;
     bottom: 0;
     letter-spacing: 1px;
     padding-top: 7px;

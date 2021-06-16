@@ -36,12 +36,12 @@ body::-webkit-scrollbar-thumb {
 
 .cadastro{
     width: 780px;
-    height: 600px;
+    height: 700px;
     border: 2px solid #C4C4C4;
     border-radius: 60px 60px 60px 60px;
     color: #fff;
     background-color: #C4C4C4;
-    top: 50%;
+    top: 55%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -137,22 +137,22 @@ h2{
     margin-right: 20%;
 }
 
-#id_tel_empresa{
+#tel{
     width: 21%;
 
 }
 
-#id_cel_empresa{
-    width: 21%;
-    margin-left: 3%;
-}
-
-#id_fax{
+#cel{
     width: 21%;
     margin-left: 3%;
 }
 
-#id_cep{
+#fax{
+    width: 21%;
+    margin-left: 3%;
+}
+
+#cep{
     width:21.5%;
     margin-left: 3%;
 }
@@ -228,12 +228,12 @@ option{
 }
 
 footer{
+    position: fixed;
     color: white;
     background: #7C7C7C;
     font-size: 12.9px;
     text-align: center;
     width: 100%;
-    position: fixed;
     bottom: 0;
     letter-spacing: 1px;
     padding-top: 7px;
