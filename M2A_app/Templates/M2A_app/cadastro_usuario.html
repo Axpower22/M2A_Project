@@ -18,7 +18,7 @@
 
             <form autocomplete="off">
                 <label>Perfil*:</label>
-                <select name="perfil">
+                <select name="perfil" required>
                     <option value="" hidden>Selecione</option>
                     <option value="1">Cliente</option>
                     <option value="2">Cliente Master</option>
@@ -27,7 +27,7 @@
                 </select>
 
                 <label id="label_estado">UF/Estado*:</label>
-                <select name="Estado">
+                <select name="Estado" required>
                     <option value="" hidden>Selecione</option>
                     <option value="AC">AC-Acre</option>
                     <option value="AL">AL-Alagoas</option>
@@ -62,30 +62,30 @@
                 <br><br>
 
                 <label id="lb_n">Nome*:</label>
-                <input type="text" name="nome" autocomplete="off">
+                <input type="text" name="nome" autocomplete="off" required>
 
                 <br>
 
                 <label id="lb_e">E-mail*:</label>
-                <input type="text" name="email" autocomplete="off">
+                <input type="email" name="email" autocomplete="off" required>
 
                 <br>
 
                 <label id="l_tel">Telefone:</label><label id="l_c">Celular*:</label><br>
                 <input id="tel" type="tel" name="telefone" placeholder="(__) ____-____" autocomplete="off">
-                <input id="cel" type="tel" name="celular" placeholder="(__) _____-____" autocomplete="off">
+                <input id="cel" type="tel" name="celular" placeholder="(__) _____-____" autocomplete="off" required>
 
                 <br>
 
                 <label id="l_s">Senha*:</label><label id="l_cs">CPF*:</label><br>
-                <input type="password" name="senha" autocomplete="off">
-                <input id="cpf" type="text" name="cpf" autocomplete="off" placeholder="___.___.___-__">
+                <input type="password" name="senha" autocomplete="off" required>
+                <input id="cpf" type="text" name="cpf" autocomplete="off" placeholder="___.___.___-__" required>
 
                 <br>
 
                 <label id="lb_cs">Confirmação de Senha*:</label>
                 <br>
-                <input type="password" name="confirma_senha" autocomplete="off">
+                <input type="password" name="confirma_senha" autocomplete="off" required>
             </form>
 
             <a href="/login"><button><b>Voltar</b></button></a>
