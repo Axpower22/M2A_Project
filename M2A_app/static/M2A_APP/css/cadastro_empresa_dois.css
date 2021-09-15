@@ -219,7 +219,7 @@ option{
 }
 
 footer{
-    position: fixed
+    position: fixed;
     color: white;
     background: #7C7C7C;
     font-size: 12.9px;
