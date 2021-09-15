@@ -37,5 +37,4 @@ urlpatterns = [
     path('cadastro_respostas/', cadastro_respostas),
     path('cadastro_perguntas/', cadastro_perguntas),
     path('cadastro_empresa_dois/', cadastro_empresa_dois),
-
 ]
