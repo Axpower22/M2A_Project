@@ -6,6 +6,9 @@ class UF(Model):
     sg_uf = CharField(max_length=2)
     nome_uf = CharField(max_length=500)
 
+    def __str__(self):
+        return f'{self.sg_uf} - {self.nome_uf}'
+
 
 class Setor(Model):
     ds_setor = CharField(max_length=500)
@@ -85,16 +88,25 @@ class Empresa(Model):
     valores = CharField(blank=True, max_length=500)
 
     # FOREIGN KEYS
-    fk_tipo_master = ForeignKey("self", on_delete=SET_NULL, null=True)
+    fk_master = ForeignKey("self", on_delete=SET_NULL, null=True)
     fk_segmento = ForeignKey(Segmento, on_delete=SET_NULL, null=True)
     fk_setor = ForeignKey(Setor, on_delete=SET_NULL, null=True)
     fk_valor_arrecadacao = ForeignKey(ValorArrecadacao, on_delete=SET_NULL, null=True)
     fk_tipo_industria = ForeignKey(TipoIndustria, on_delete=SET_NULL, null=True)
+    fk_uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
 
     # ENDEREÇO
     cep = BRPostalCodeField()
     logradouro = CharField(max_length=500)
     endereco = CharField(max_length=500)
+    bairro = CharField(max_length=500)
+    cidade = CharField(max_length=500)
+
+
+class Faturamento(Model):
+    fk_empresa = ForeignKey(Empresa, on_delete=SET_NULL, null=True)
+    dt_ano = DateField()
+    valor = IntegerField()
 
 
 class TipoDiagnostico(Model):
