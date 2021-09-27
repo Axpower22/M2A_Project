@@ -183,26 +183,18 @@
                             <th>Gráficos</th>
                             <th>Ações</th>
                         </tr>
-                        <tr>
-                            <td>chiquinhos</td>
-                            <td>hard</td>
-                            <td>flavio</td>
-                            <td>alberto</td>
-                            <td>222</td>
-                            <td>333333</td>
-                            <td>img</td>
-                            <td>lixeira</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 60px 0px 60px 0px;"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        {% for diagnostico in diagnosticos %}
+                            <tr>
+                                <td>{{ diagnostico.fk_empresa }}</td>
+                                <td>{{ diagnostico.tipo }}</td>
+                                <td>flavio</td>
+                                <td>alberto</td>
+                                <td>222</td>
+                                <td>333333</td>
+                                <td>img</td>
+                                <td>lixeira</td>
+                            </tr>
+                        {% endfor %}
                     </table>
 
                 </form>

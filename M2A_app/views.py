@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import *
 
 def login(request):
     return render(request, 'M2A_app/login.html')
@@ -14,19 +14,23 @@ def cadastro_empresa(request):
 
 
 def lista_diagnostico(request):
-    return render(request, 'M2A_app/lista_diagnostico.html')
+    diagnosticos = Diagnostico.objects.all()
+    return render(request, 'M2A_app/lista_diagnostico.html', {'diagnosticos': diagnosticos})
 
 
 def lista_empresa(request):
-    return render(request, 'M2A_app/lista_empresas.html')
+    empresas = Empresa.objects.all()
+    return render(request, 'M2A_app/lista_empresas.html', {'empresas': empresas})
 
 
 def lista_grupo(request):
-    return render(request, 'M2A_app/lista_grupo.html')
+    grupos = Grupo.objects.all()
+    return render(request, 'M2A_app/lista_grupo.html', {'grupos': grupos})
 
 
 def lista_usuario(request):
-    return render(request, 'M2A_app/lista_usuario.html')
+    usuarios = Usuario.objects.all()
+    return render(request, 'M2A_app/lista_usuario.html', {'usuarios': usuarios})
 
 
 def lista_respostas(request):
