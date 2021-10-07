@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from M2A_app.views import login, cadastro_usuario, cadastro_empresa, lista_diagnostico,\
     lista_empresa, lista_grupo, lista_usuario, lista_respostas, dados_usuario, graficos, registro_grupo,\
-    cadastro_diagnostico, cadastro_respostas, cadastro_perguntas, cadastro_empresa_dois
+    cadastro_diagnostico, cadastro_respostas, cadastro_perguntas
 
 
 urlpatterns = [
@@ -36,5 +36,4 @@ urlpatterns = [
     path('cadastro_diagnostico/', cadastro_diagnostico),
     path('cadastro_respostas/', cadastro_respostas),
     path('cadastro_perguntas/', cadastro_perguntas),
-    path('cadastro_empresa_dois/', cadastro_empresa_dois),
 ]

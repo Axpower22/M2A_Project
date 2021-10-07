@@ -59,7 +59,3 @@ def cadastro_respostas(request):
 
 def cadastro_perguntas(request):
     return render(request, 'M2A_app/cadastro_perguntas.html')
-
-
-def cadastro_empresa_dois(request):
-    return render(request, 'M2A_app/cadastro_empresa_dois.html')
