@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from .models import *
+from django.shortcuts import render, redirect
+from M2A_app.models import *
+from M2A_app.forms import *
+
 
 def login(request):
     return render(request, 'M2A_app/login.html')
@@ -10,7 +12,16 @@ def cadastro_usuario(request):
 
 
 def cadastro_empresa(request):
-    return render(request, 'M2A_app/cadastro_empresa.html')
+    if request.method == 'GET':
+        form = EmpresaForm()
+        return render(request, 'M2A_app/cadastro_empresa.html', {'form': form})
+    elif request.method == 'POST':
+        nova_empresa = EmpresaForm(request.POST)
+
+        if nova_empresa.is_valid():
+            nova_empresa.save()
+
+        return redirect('/lista_empresa')
 
 
 def lista_diagnostico(request):

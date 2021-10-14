@@ -88,7 +88,7 @@ class Empresa(Model):
     valores = CharField(blank=True, max_length=500)
 
     # FOREIGN KEYS
-    fk_master = ForeignKey("self", on_delete=SET_NULL, null=True)
+    fk_master = ForeignKey("self", on_delete=SET_NULL, null=True, blank=True)
     fk_segmento = ForeignKey(Segmento, on_delete=SET_NULL, null=True)
     fk_setor = ForeignKey(Setor, on_delete=SET_NULL, null=True)
     fk_valor_arrecadacao = ForeignKey(ValorArrecadacao, on_delete=SET_NULL, null=True)

@@ -3,6 +3,7 @@ from M2A_app.models import *
 
 
 def seed_uf():
+    UF.objects.all().delete()
     UF.objects.bulk_create([
         UF(1, 'AC', 'Acre'),
         UF(2, 'AL', 'Alagoas'),
@@ -36,6 +37,7 @@ def seed_uf():
 
 
 def seed_setor():
+    Setor.objects.all().delete()
     Setor.objects.bulk_create([
         Setor(1, 'Agronegócio'),
         Setor(2, 'Análise Clínica'),
@@ -51,6 +53,7 @@ def seed_setor():
 
 
 def seed_segmento():
+    Segmento.objects.all().delete()
     Segmento.objects.bulk_create([
         Segmento(1, 'Adestramento'),
         Segmento(2, 'Agrícultura e Pesca'),
@@ -105,6 +108,7 @@ def seed_segmento():
 1, 
 
 def seed_valorArrecadacao():
+    ValorArrecadacao.objects.all().delete()
     ValorArrecadacao.objects.bulk_create([
         ValorArrecadacao(1, 'MEI - até R$60 mil'),
         ValorArrecadacao(2, '0 até R$360 mil'),
@@ -115,6 +119,7 @@ def seed_valorArrecadacao():
 
 
 def seed_tipoIndustria():
+    TipoIndustria.objects.all().delete()
     TipoIndustria.objects.bulk_create([
         TipoIndustria(1, 'Associação/Cooperativa'),
         TipoIndustria(2, 'Cliente'),
@@ -127,6 +132,7 @@ def seed_tipoIndustria():
 
 
 def seed_situacao():
+    Situacao.objects.all().delete()
     Situacao.objects.bulk_create([
         Situacao(1, 'Ativo'),
         Situacao(2, 'Inativo'),
@@ -134,6 +140,7 @@ def seed_situacao():
 
 
 def seed_tipoDiagnostico():
+    TipoDiagnostico.objects.all().delete()
     TipoDiagnostico.objects.bulk_create([
         TipoDiagnostico(1, 'Simples'),
         TipoDiagnostico(2, 'Completo'),
@@ -141,6 +148,7 @@ def seed_tipoDiagnostico():
 
 
 def seed_faseProjeto():
+    FaseProjeto.objects.all().delete()
     FaseProjeto.objects.bulk_create([
         FaseProjeto(1, 'T0'),
         FaseProjeto(2, 'T1'),
