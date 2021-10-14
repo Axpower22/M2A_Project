@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
     padding: 40px;
     height: 100px;
     position: relative;
-    left: 50%;
+    left: 8%;
     transform: translate(-50%, -10%);
 }
 
@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb {
     top: 44%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -33%);
     box-sizing: border-box;
     padding: 32px 28px;
     box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.2);
@@ -253,6 +253,14 @@ h2{
 
 #select_tipo_empresa{
     margin-left: 18%;
+}
+
+#select_estado{
+    margin-left: 101px;
+}
+
+#select_estado option{
+    text-align: center;
 }
 
 #lb_numero_empregados{

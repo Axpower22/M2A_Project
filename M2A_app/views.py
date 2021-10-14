@@ -13,8 +13,8 @@ def cadastro_usuario(request):
 
 def cadastro_empresa(request):
     if request.method == 'GET':
-        form = EmpresaForm()
-        return render(request, 'M2A_app/cadastro_empresa.html', {'form': form})
+        ufs = UF.objects.all()
+        return render(request, 'M2A_app/cadastro_empresa.html', {'ufs': ufs})
     elif request.method == 'POST':
         nova_empresa = EmpresaForm(request.POST)
 
