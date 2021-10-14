@@ -162,11 +162,11 @@ def seed_faseProjeto():
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
-        # seed_tipoDiagnostico()
-        # seed_tipoIndustria()
-        # seed_situacao()
-        # seed_faseProjeto()
-        # seed_segmento()
-        # seed_setor()
+        seed_tipoDiagnostico()
+        seed_tipoIndustria()
+        seed_situacao()
+        seed_faseProjeto()
+        seed_segmento()
+        seed_setor()
         seed_uf()
-        # seed_valorArrecadacao()
+        seed_valorArrecadacao()
