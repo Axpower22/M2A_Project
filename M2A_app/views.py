@@ -14,15 +14,23 @@ def cadastro_usuario(request):
 def cadastro_empresa(request):
     if request.method == 'GET':
         ufs = UF.objects.all()
-        return render(request, 'M2A_app/cadastro_empresa.html', {'ufs': ufs})
+        setores = Setor.objects.all()
+        segmentos = Segmento.objects.all()
+        valores_arrecadacoes = ValorArrecadacao.objects.all()
+        tipos_empresas = TipoIndustria.objects.all()
+        faturamentos = Faturamento.objects.all()
+        return render(request, 'M2A_app/cadastro_empresa.html', {'ufs': ufs,
+                                                                 'setores': setores,
+                                                                 'segmentos': segmentos,
+                                                                 'valores_arrecadacoes': valores_arrecadacoes,
+                                                                 'tipos_empresas': tipos_empresas,
+                                                                 'faturamentos': faturamentos})
     elif request.method == 'POST':
         nova_empresa = EmpresaForm(request.POST)
-
         if nova_empresa.is_valid():
             nova_empresa.save()
 
         return redirect('/lista_empresa')
-
 
 def lista_diagnostico(request):
     diagnosticos = Diagnostico.objects.all()

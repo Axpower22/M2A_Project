@@ -11,7 +11,8 @@
         <h1>Cadastro de Empresa</h1>
         <h2>Dados da Empresa</h2>
 
-        <form autocomplete="off">
+        <form autocomplete="off" method="post">
+            {% csrf_token %}
             <label id="lb_cnpj">CNPJ:</label>
             <label id="lb_insc_estadual">Inscrição Estadual:</label>
             <label id="lb_check_master">É Cliente Master?</label>
@@ -86,16 +87,16 @@
             <br>
 
             <label id="lb_cid">Cidade:</label>
-            <label id="lb_estado">UF/Estado</label>
+            <label id="lb_estado">UF/Estado:</label>
 
             <br>
 
             <input id="id_cidade" type="text" name="cidade" autocomplete="off">
 
-            <select name="estado" id="select_estado">
+            <select name="estado" id="select_estado" style="width: 20%;">
                 <option value="" hidden>Selecione</option>
                 {% for uf in ufs %}
-                    <option value=" {{ forloop.counter }} ">{{  uf.sg_uf }}</option>
+                    <option value=" {{ forloop.counter }} ">{{  uf.sg_uf }} - {{ uf.nome_uf }}</option>
                 {% endfor %}
             </select>
 
@@ -144,32 +145,32 @@
 
             <br>
 
-            <select id="select_setor" name="setor">
+            <select name="setor" id="select_setor">
                 <option value="" hidden>Selecione</option>
-                <option value="1">Masculino</option>
-                <option value="2">Feminino</option>
-                <option value="3">Outro</option>
+                {% for setor in setores %}
+                    <option value=" {{ forloop.counter }} ">{{  setor.ds_setor }}</option>
+                {% endfor %}
             </select>
 
-            <select id="select_segmento" name="segmento">
+            <select name="segmento" id="select_segmento" style="width: 15%;">
                 <option value="" hidden>Selecione</option>
-                <option value="1">Masculino</option>
-                <option value="2">Feminino</option>
-                <option value="3">Outro</option>
+                {% for segmento in segmentos %}
+                    <option value=" {{ forloop.counter }} ">{{  segmento.ds_segmento }}</option>
+                {% endfor %}
             </select>
 
-            <select id="select_arrecadacao" name="arrecadacao">
+            <select name="arrecadacao" id="select_arrecadacao">
                 <option value="" hidden>Selecione</option>
-                <option value="1">Masculino</option>
-                <option value="2">Feminino</option>
-                <option value="3">Outro</option>
+                {% for arrecadacao in arrecadacoes %}
+                    <option value=" {{ forloop.counter }} ">{{  arrecadacao.ds_valor_arrecadacao }}</option>
+                {% endfor %}
             </select>
 
-            <select id="select_tipo_empresa" name="tipo_empresa">
+            <select name="tipo_empresa" id="select_tipo_empresa" style="width: 15%;">
                 <option value="" hidden>Selecione</option>
-                <option value="1">Masculino</option>
-                <option value="2">Feminino</option>
-                <option value="3">Outro</option>
+                {% for tipo_empresa in tipos_empresas %}
+                    <option value=" {{ forloop.counter }} ">{{  tipo_empresa.ds_tipo_industria }}</option>
+                {% endfor %}
             </select>
 
             <br>
@@ -211,18 +212,17 @@
             <textarea class="text_areas" name="inf_valores" autocomplete="off" rows="5" maxlength="500"></textarea>
 
             <label>Faturamento de</label>
-            <select id="select_faturamento" name="faturamento">
+            <select name="faturamento" id="select_faturamento">
                 <option value="" hidden>Selecione</option>
-                <option value="1">2018</option>
-                <option value="2">2019</option>
-                <option value="3">2020</option>
-                <option value="4">2021</option>
+                {% for faturamento in faturamentos %}
+                    <option value=" {{ forloop.counter }} ">{{  faturamento.dt_ano }}</option>
+                {% endfor %}
             </select>
             <br>
-            <textarea id="faturamento" name="valor_faturamento" autocomplete="off" rows="1">0,00</textarea>
+            <textarea id="faturamento" name="valor_faturamento" autocomplete="off" rows="1" readonly="readonly">0,00</textarea>
 
             <a href="/lista_empresa"><button><b>Voltar</b></button></a>
-            <button><b>Salvar</b></button>
+            <button type="submit"><b>Salvar</b></button>
         </form>
     </div>
 
