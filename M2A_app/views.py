@@ -1,80 +1,31 @@
-from django.shortcuts import render, redirect
-from M2A_app.models import *
-from M2A_app.forms import *
+from collections import namedtuple
+
+from rest_framework import viewsets, decorators, views
+from rest_framework.response import Response
+from M2A_app import models, serializers
+
+EmpresaFKS = namedtuple('EmpresaFKS', ('ufs', 'setores', 'segmentos', 'valores_arrecadacoes', 'tipos_industria', 'grupos'))
 
 
-def login(request):
-    return render(request, 'M2A_app/login.html')
+class EmpresaViewSet(viewsets.ModelViewSet):
+    queryset = models.Empresa.objects.all()
+    serializer_class = serializers.EmpresaSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = models.Empresa.objects.all()
+        serializer = serializers.ListaEmpresaSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 
-def cadastro_usuario(request):
-    return render(request, 'M2A_app/cadastro_usuario.html')
-
-
-def cadastro_empresa(request):
-    if request.method == 'GET':
-        ufs = UF.objects.all()
-        setores = Setor.objects.all()
-        segmentos = Segmento.objects.all()
-        valores_arrecadacoes = ValorArrecadacao.objects.all()
-        tipos_empresas = TipoIndustria.objects.all()
-        faturamentos = Faturamento.objects.all()
-        return render(request, 'M2A_app/cadastro_empresa.html', {'ufs': ufs,
-                                                                 'setores': setores,
-                                                                 'segmentos': segmentos,
-                                                                 'valores_arrecadacoes': valores_arrecadacoes,
-                                                                 'tipos_empresas': tipos_empresas,
-                                                                 'faturamentos': faturamentos})
-    elif request.method == 'POST':
-        nova_empresa = EmpresaForm(request.POST)
-        if nova_empresa.is_valid():
-            nova_empresa.save()
-
-        return redirect('/lista_empresa')
-
-def lista_diagnostico(request):
-    diagnosticos = Diagnostico.objects.all()
-    return render(request, 'M2A_app/lista_diagnostico.html', {'diagnosticos': diagnosticos})
-
-
-def lista_empresa(request):
-    empresas = Empresa.objects.all()
-    return render(request, 'M2A_app/lista_empresas.html', {'empresas': empresas})
-
-
-def lista_grupo(request):
-    grupos = Grupo.objects.all()
-    return render(request, 'M2A_app/lista_grupo.html', {'grupos': grupos})
-
-
-def lista_usuario(request):
-    usuarios = Usuario.objects.all()
-    return render(request, 'M2A_app/lista_usuario.html', {'usuarios': usuarios})
-
-
-def lista_respostas(request):
-    return render(request, 'M2A_app/lista_respostas.html')
-
-
-def dados_usuario(request):
-    return render(request, 'M2A_app/dados_usuario.html')
-
-
-def graficos(request):
-    return render(request, 'M2A_app/graficos.html')
-
-
-def registro_grupo(request):
-    return render(request, 'M2A_app/registro_grupo.html')
-
-
-def cadastro_diagnostico(request):
-    return render(request, 'M2A_app/cadastro_diagnostico.html')
-
-
-def cadastro_respostas(request):
-    return render(request, 'M2A_app/cadastro_respostas.html')
-
-
-def cadastro_perguntas(request):
-    return render(request, 'M2A_app/cadastro_perguntas.html')
+class EmpresaFKSView(views.APIView):
+    def get(self, request):
+        empresafks = EmpresaFKS(
+            ufs=models.UF.objects.all(),
+            setores=models.Setor.objects.all(),
+            segmentos=models.Segmento.objects.all(),
+            valores_arrecadacoes=models.ValorArrecadacao.objects.all(),
+            tipos_industria=models.TipoIndustria.objects.all(),
+            grupos=models.Grupo.objects.all()
+        )
+        serialized_empresafks = serializers.EmpresaFKSerializer(empresafks)
+        return Response(serialized_empresafks.data)

@@ -14,26 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from M2A_app.views import login, cadastro_usuario, cadastro_empresa, lista_diagnostico,\
-    lista_empresa, lista_grupo, lista_usuario, lista_respostas, dados_usuario, graficos, registro_grupo,\
-    cadastro_diagnostico, cadastro_respostas, cadastro_perguntas
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 
+from M2A_app import views
+
+router = DefaultRouter()
+router.register(r'empresas', views.EmpresaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
-    path('cadastro_usuario/', cadastro_usuario),
-    path('cadastro_empresa/', cadastro_empresa),
-    path('lista_diagnosticos/', lista_diagnostico),
-    path('lista_empresa/', lista_empresa),
-    path('lista_grupo/', lista_grupo),
-    path('lista_usuario/', lista_usuario),
-    path('lista_respostas/', lista_respostas),
-    path('dados_usuario/', dados_usuario),
-    path('graficos/', graficos),
-    path('registro_grupo/', registro_grupo),
-    path('cadastro_diagnostico/', cadastro_diagnostico),
-    path('cadastro_respostas/', cadastro_respostas),
-    path('cadastro_perguntas/', cadastro_perguntas),
+    path('empresafks', views.EmpresaFKSView.as_view()),
+    path('', include(router.urls)),
 ]

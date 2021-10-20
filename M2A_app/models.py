@@ -1,5 +1,5 @@
 from django.db.models import Model, CharField, IntegerField, BooleanField, ForeignKey, SET_NULL, DateField, EmailField
-from localflavor.br.models import BRCNPJField, BRPostalCodeField
+from localflavor.br.models import BRCNPJField, BRPostalCodeField, BRStateField, STATE_CHOICES
 
 
 class UF(Model):
@@ -53,7 +53,7 @@ class Usuario(Model):
     nome = CharField(max_length=500)
     email = EmailField()
     uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
-    telefone = ForeignKey(Telefone, on_delete=SET_NULL, null=True)
+    telefone = CharField(blank=True, max_length=500)
     situacao = ForeignKey(Situacao, on_delete=SET_NULL, null=True)
 
 
@@ -63,31 +63,32 @@ class Grupo(Model):
 
 class Empresa(Model):
     cnpj = BRCNPJField()
-    razao_social = CharField(max_length=500)
-    fantasia = CharField(max_length=500)
+    razao_social = CharField(max_length=500, unique=True)
+    fantasia = CharField(max_length=500, unique=True)
     bool_master = BooleanField()
-    inscricao_estadual = IntegerField()
+    inscricao_estadual = CharField(max_length=500, unique=True)
     num_empregados = IntegerField()
 
-    email = EmailField()
+    email = EmailField(unique=True)
 
     dt_ano_inicio = DateField()
 
     projeto = CharField(max_length=500)
     nome_gestor = CharField(max_length=500)
+    telefone_gestor = CharField(blank=True, max_length=500)
 
-    grupo = ForeignKey(Grupo, on_delete=SET_NULL, null=True)
+    telefone = CharField(max_length=500)
+    fax = CharField(blank=True, max_length=500)
+    celular = CharField(max_length=500)
 
     # INFORMAÇÕES COMPLEMENTARES
     ds_negocio = CharField(max_length=500)
-    bool_missao = BooleanField()
     missao = CharField(blank=True, max_length=500)
-    bool_visao = BooleanField()
     visao = CharField(blank=True, max_length=500)
-    bool_valores = BooleanField()
     valores = CharField(blank=True, max_length=500)
 
     # FOREIGN KEYS
+    fk_grupo = ForeignKey(Grupo, on_delete=SET_NULL, null=True)
     fk_master = ForeignKey("self", on_delete=SET_NULL, null=True, blank=True)
     fk_segmento = ForeignKey(Segmento, on_delete=SET_NULL, null=True)
     fk_setor = ForeignKey(Setor, on_delete=SET_NULL, null=True)
@@ -95,16 +96,36 @@ class Empresa(Model):
     fk_tipo_industria = ForeignKey(TipoIndustria, on_delete=SET_NULL, null=True)
     fk_uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
 
+    # RESPONSAVEL
+    FORMACAO_CHOICES = [
+        ('Analfabeto', 'Analfabeto'),
+        ('Primeiro grau', 'Primeiro grau'),
+        ('Segundo grau', 'Segundo grau'),
+        ('Superior', 'Superior'),
+        ('Pós-Graduação', 'Pós-Graduação'),
+        ('Mestrado e Doutorado', 'Mestrado e Doutorado')
+    ]
+
+    SEXO_CHOICES = [
+        ('M', 'Masculino'),
+        ('F', 'Feminino'),
+    ]
+
+    nome_responsavel = CharField(max_length=500)
+    email_responsavel = EmailField(unique=True)
+    formacao_responsavel = CharField(choices=FORMACAO_CHOICES, max_length=500)
+    sexo_responsavel = CharField(choices=SEXO_CHOICES, max_length=500)
+    dt_nascimento_responsavel = DateField()
+
     # ENDEREÇO
     cep = BRPostalCodeField()
     logradouro = CharField(max_length=500)
-    endereco = CharField(max_length=500)
     bairro = CharField(max_length=500)
     cidade = CharField(max_length=500)
 
 
 class Faturamento(Model):
-    fk_empresa = ForeignKey(Empresa, on_delete=SET_NULL, null=True)
+    fk_empresa = ForeignKey(Empresa, on_delete=SET_NULL, null=True, related_name='faturamentos')
     dt_ano = DateField()
     valor = IntegerField()
 
