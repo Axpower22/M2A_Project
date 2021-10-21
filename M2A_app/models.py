@@ -62,7 +62,7 @@ class Grupo(Model):
 
 
 class Empresa(Model):
-    cnpj = BRCNPJField()
+    cnpj = CharField(max_length=500, unique=True)
     razao_social = CharField(max_length=500, unique=True)
     fantasia = CharField(max_length=500, unique=True)
     bool_master = BooleanField()
