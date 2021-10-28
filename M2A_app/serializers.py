@@ -124,4 +124,4 @@ class ListaEmpresaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Empresa
-        fields = ['fantasia', 'fk_uf', 'fk_master']
+        fields = ['id', 'fantasia', 'fk_uf', 'fk_master']
