@@ -110,7 +110,7 @@ def seed_segmento():
 def seed_valorArrecadacao():
     ValorArrecadacao.objects.all().delete()
     ValorArrecadacao.objects.bulk_create([
-        ValorArrecadacao(1, 'MEI - até R$60 mil'),
+        ValorArrecadacao(1, 'MEI - até R$81 mil'),
         ValorArrecadacao(2, '0 até R$360 mil'),
         ValorArrecadacao(3, 'R$360 até R$3.600 mil'),
         ValorArrecadacao(4, 'R$3.600 mil até R$5 milhões'),

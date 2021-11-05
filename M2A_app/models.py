@@ -66,7 +66,7 @@ class Empresa(Model):
     razao_social = CharField(max_length=500, unique=True)
     fantasia = CharField(max_length=500, unique=True)
     bool_master = BooleanField()
-    inscricao_estadual = CharField(max_length=500, unique=True)
+    inscricao_estadual = CharField(blank=True, max_length=500, unique=True)
     num_empregados = IntegerField()
 
     email = EmailField(unique=True)
@@ -122,6 +122,7 @@ class Empresa(Model):
     logradouro = CharField(max_length=500)
     bairro = CharField(max_length=500)
     cidade = CharField(max_length=500)
+    complemento = CharField(blank=True, max_length=500)
 
 
 class Faturamento(Model):

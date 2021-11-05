@@ -110,6 +110,12 @@ class EmpresaSerializer(serializers.ModelSerializer):
         ]
 
 
+class EmpresaVinculadaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Empresa
+        fields = '__all__'
+
+
 class EmpresaFKSerializer(serializers.Serializer):
     ufs = UFSerializer(many=True)
     setores = SetorSerializer(many=True)
@@ -117,6 +123,7 @@ class EmpresaFKSerializer(serializers.Serializer):
     valores_arrecadacoes = ValorArrecadacaoSerializer(many=True)
     tipos_industria = TipoIndustriaSerializer(many=True)
     grupos = GrupoSerializer(many=True)
+    empresas_vinculadas = EmpresaVinculadaSerializer(many=True)
 
 
 class ListaEmpresaSerializer(serializers.ModelSerializer):
