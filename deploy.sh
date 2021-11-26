@@ -1,4 +1,4 @@
-git pull https://github.com/murillenda/M2A_Project.git
+git pull
 
 pip install -r requirements.txt
 
