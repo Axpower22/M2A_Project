@@ -34,13 +34,13 @@ from M2A_app.models import *
 #     cidade=body.cidade,
 # )
 
-class EmpresaForm(ModelForm):
-    class Meta:
-        model = Empresa
-        exclude = ['id', 'fk_master']
-
-
-class DiagnosticoForm(ModelForm):
-    class Meta:
-        model = Diagnostico
-        exclude = ['id']
+# class EmpresaForm(ModelForm):
+#     class Meta:
+#         model = Empresa
+#         exclude = ['id', 'fk_master']
+#
+#
+# class DiagnosticoForm(ModelForm):
+#     class Meta:
+#         model = Diagnostico
+#         exclude = ['id']

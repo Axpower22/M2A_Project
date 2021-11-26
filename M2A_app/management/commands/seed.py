@@ -159,6 +159,19 @@ def seed_faseProjeto():
     ])
 
 
+def seed_fundamento():
+    Fundamento.objects.all().delete()
+    Fundamento.objects.bulk_create([
+        Fundamento(1, 'Clientes'),
+        Fundamento(2, 'Sociedade'),
+        Fundamento(3, 'Liderança'),
+        Fundamento(4, 'Estratégias e planos'),
+        Fundamento(5, 'Pessoas'),
+        Fundamento(6, 'Processos'),
+        Fundamento(7, 'Informação e conhecimento'),
+    ])
+
+
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
@@ -170,3 +183,4 @@ class Command(BaseCommand):
         seed_setor()
         seed_uf()
         seed_valorArrecadacao()
+        seed_fundamento()

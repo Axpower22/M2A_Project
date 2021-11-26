@@ -1,5 +1,7 @@
 from rest_framework import serializers, generics
 from M2A_app import models
+from django.contrib.auth.models import User
+from drf_writable_nested.serializers import WritableNestedModelSerializer
 
 
 class SegmentoSerializer(serializers.ModelSerializer):
@@ -32,10 +34,10 @@ class TipoIndustriaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class TelefoneSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.Telefone
-        fields = ['ddd', 'tipo_telefone', 'telefone']
+# class TelefoneSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = models.Telefone
+#         fields = ['ddd', 'tipo_telefone', 'telefone']
 
 
 class FaturamentoSerializer(serializers.ModelSerializer):
@@ -47,7 +49,7 @@ class FaturamentoSerializer(serializers.ModelSerializer):
 class GrupoSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Grupo
-        fields = ['nome_grupo']
+        fields = ['id', 'nome_grupo']
 
 
 class EmpresaSerializer(serializers.ModelSerializer):
@@ -56,7 +58,7 @@ class EmpresaSerializer(serializers.ModelSerializer):
     fk_setor = serializers.PrimaryKeyRelatedField(queryset=models.Setor.objects.all())
     fk_valor_arrecadacao = serializers.PrimaryKeyRelatedField(queryset=models.ValorArrecadacao.objects.all())
     fk_tipo_industria = serializers.PrimaryKeyRelatedField(queryset=models.TipoIndustria.objects.all())
-    fk_grupo = serializers.PrimaryKeyRelatedField(queryset=models.Grupo.objects.all(), allow_null=True)
+    fk_grupo = GrupoSerializer(allow_null=True)
 
     faturamentos = FaturamentoSerializer(many=True)
 
@@ -126,9 +128,60 @@ class EmpresaFKSerializer(serializers.Serializer):
     empresas_vinculadas = EmpresaVinculadaSerializer(many=True)
 
 
+class PerfilSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Perfil
+        fields = '__all__'
+
+
+class SituacaoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Situacao
+        fields = '__all__'
+
+
+class UsuarioFKSerializer(serializers.Serializer):
+    ufs = UFSerializer(many=True)
+    perfis = PerfilSerializer(many=True)
+    situacoes = SituacaoSerializer(many=True)
+
+
 class ListaEmpresaSerializer(serializers.ModelSerializer):
     fk_uf = serializers.SlugRelatedField(queryset=models.UF.objects.all(), slug_field='sg_uf')
 
     class Meta:
         model = models.Empresa
-        fields = ['id', 'fantasia', 'fk_uf', 'fk_master']
+        fields = ['id', 'fantasia', 'fk_uf', 'fk_master', 'fk_grupo']
+
+
+class DiagnosticoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Diagnostico
+        fields = ['id', 'dt_ano', 'tipo', 'fk_empresa', 'fase']
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        exclude = ['password', 'last_login', 'date_joined', 'is_superuser']
+
+
+class UsuarioSerializer(WritableNestedModelSerializer):
+    user = UserSerializer(required=False)
+
+    class Meta:
+        model = models.UsuarioInfo
+        fields = ('id', 'user', 'nome', 'telefone', 'situacao', 'perfil', 'uf')
+
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        email = validated_data.pop('email')
+
+        user = User.objects.create_user(
+            username=email,
+            password=password,
+        )
+
+        usuario = models.UsuarioInfo.objects.create(user=user.id, email=email, **validated_data)
+
+        return usuario

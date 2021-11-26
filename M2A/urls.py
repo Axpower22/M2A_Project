@@ -16,14 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
+
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 from M2A_app import views
 
 router = DefaultRouter()
 router.register(r'empresas', views.EmpresaViewSet)
+router.register(r'diagnosticos', views.DiagnosticoViewSet)
+router.register(r'usuarios', views.UsuariosViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('empresafks', views.EmpresaFKSView.as_view()),
+    path('auth', obtain_auth_token),
+    path('empresafks/', views.EmpresaFKSView.as_view()),
+    path('grupos/', views.GruposView.as_view()),
     path('', include(router.urls)),
 ]
