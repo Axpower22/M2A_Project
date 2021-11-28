@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 
 EmpresaFKS = namedtuple('EmpresaFKS',
                         ('ufs', 'setores', 'segmentos', 'valores_arrecadacoes', 'tipos_industria', 'grupos',
-                         'empresas_vinculadas'))
+                         'empresas_vinculadas', 'projetos'))
 
 UsuarioFKS = namedtuple('UsuarioFKS', ('ufs', 'perfis', 'situacoes'))
 
@@ -22,6 +22,19 @@ class EmpresaViewSet(viewsets.ModelViewSet):
     filterset_fields = ['fk_master', 'fk_uf', 'fk_valor_arrecadacao', 'fk_setor']
     search_fields = ['fantasia']
     permission_classes = [IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return serializers.ListaEmpresaSerializer
+        else:
+            return serializers.EmpresaSerializer
+
+    @action(detail=True, methods=['GET'])
+    def get_questionario(self, request, *args, **kwargs):
+        empresa = self.get_object()
+        questionario = serializers.QuestionarioSerializer(empresa.questionario)
+
+        return Response(questionario.data)
 
     @action(detail=False, methods=['POST'])
     def inserir_em_grupo(self, request, *args, **kwargs):
@@ -59,6 +72,7 @@ class EmpresaFKSView(views.APIView):
             tipos_industria=models.TipoIndustria.objects.all(),
             grupos=models.Grupo.objects.all(),
             empresas_vinculadas=models.Empresa.objects.filter(bool_master=True),
+            projetos=models.Projeto.objects.all()
         )
         serialized_empresafks = serializers.EmpresaFKSerializer(empresafks)
         return Response(serialized_empresafks.data)
@@ -83,9 +97,22 @@ class UsuariosViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.UsuarioSerializer
     permission_classes = [IsAuthenticated]
 
-    @action(detail=True, methods=['PUT'])
+    @action(detail=False, methods=['PUT'])
     def change_password(self, request, *args, **kwargs):
-        pass
+        password = request.data.pop('password')
+        confirm_password = request.data.pop('confirmPassword')
+
+        if password != confirm_password:
+            return Response(status=status.HTTP_400_BAD_REQUEST, data={"password": "Os valores devem ser iguais",
+                                                                      "confirmPassword": "Os valores devem ser iguais"})
+
+        user = request.user
+        print(user)
+        user.set_password(password)
+
+        user.save()
+
+        return Response()
 
     @action(detail=False, methods=['GET'])
     def consultores(self, request, *args, **kwargs):
@@ -106,9 +133,37 @@ class UsuariosViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['GET'])
     def get_usuario(self, request, *args, **kwargs):
-        token = request.auth
-        print(token.user_id)
-        models.UsuarioInfo.objects.get(user=token.user_id)
-        user = serializers.UsuarioSerializer()
+        user = request.user
+        user = serializers.UsuarioSerializer(user.info)
 
         return Response(user.data)
+
+
+class QuestionarioViewset(viewsets.ModelViewSet):
+    queryset = models.Questionario.objects.all()
+    serializer_class = serializers.QuestionarioSerializer
+    permission_classes = [IsAuthenticated]
+
+    @action(detail=True, methods=['POST'])
+    def responder(self, request, *args, **kwargs):
+        data = request.data
+        questionario = self.get_object()
+
+        diagnostico_count = models.Diagnostico.objects.filter(empresa_id=data["empresa"]).count()
+
+        fase = f"T{diagnostico_count}"
+
+        diagnostico = models.Diagnostico.objects.create(
+            empresa_id=data["empresa"],
+            fase=fase,
+            questionario_id=questionario.id,
+        )
+
+        for resposta in data["respostas"]:
+            models.RespostaQuestionario.objects.create(
+                diagnostico=diagnostico,
+                pergunta_id=resposta["pergunta"],
+                resposta_id=resposta["resposta"],
+            )
+
+        return Response(status=status.HTTP_200_OK)

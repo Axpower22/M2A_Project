@@ -12,7 +12,7 @@ from .valor_arredacao import ValorArrecadacao
 
 
 class Empresa(Model):
-    consultor_master = ForeignKey(User, on_delete=SET_NULL, null=True)
+    usuario = ForeignKey(User, on_delete=SET_NULL, null=True)
 
     cnpj = CharField(max_length=500, unique=True)
     razao_social = CharField(max_length=500, unique=True)
@@ -21,11 +21,11 @@ class Empresa(Model):
     inscricao_estadual = CharField(blank=True, max_length=500, unique=True)
     num_empregados = IntegerField()
 
-    email = EmailField(unique=True)
+    # email = EmailField(unique=True)
 
     dt_ano_inicio = DateField()
 
-    projeto = OneToOneField(Projeto, on_delete=SET_NULL, null=True)
+    projeto = ForeignKey(Projeto, on_delete=SET_NULL, null=True)
 
     telefone = CharField(max_length=500)
     fax = CharField(blank=True, max_length=500)
@@ -52,3 +52,6 @@ class Empresa(Model):
     bairro = CharField(max_length=500)
     cidade = CharField(max_length=500)
     complemento = CharField(blank=True, max_length=500)
+
+    def __str__(self):
+        return self.fantasia

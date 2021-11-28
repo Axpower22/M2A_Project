@@ -1,5 +1,5 @@
 from .db_receivers import create_auth_token
-from .diagnostico import Diagnostico
+from .diagnostico import Diagnostico, RespostaQuestionario
 from .fase_projeto import FaseProjeto
 from .faturamento import Faturamento
 from .grupo import Grupo

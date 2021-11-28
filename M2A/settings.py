@@ -63,6 +63,12 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
+DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
+
+DATE_FORMAT = '%d-%m-%Y'
+
 REST_FRAMEWORK = {
     'DATE_FORMAT': '%d/%m/%Y',
     'DATE_INPUT_FORMATS': [

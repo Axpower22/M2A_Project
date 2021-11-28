@@ -8,7 +8,7 @@ from .uf import UF
 
 
 class UsuarioInfo(Model):
-    user = OneToOneField(User, on_delete=CASCADE, default=1)
+    user = OneToOneField(User, on_delete=CASCADE, default=1, related_name='info')
 
     nome = CharField(max_length=500)
     uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
@@ -26,7 +26,7 @@ class UsuarioInfo(Model):
         ('Pós-Graduação', 'Pós-Graduação'),
         ('Mestrado e Doutorado', 'Mestrado e Doutorado')
     ]
-    formacao_responsavel = CharField(choices=FORMACAO_CHOICES, max_length=500)
+    formacao = CharField(choices=FORMACAO_CHOICES, max_length=500)
 
     def __str__(self):
         return self.nome
