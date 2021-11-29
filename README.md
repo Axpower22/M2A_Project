@@ -12,6 +12,17 @@ Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria
 
 ## 🚀 Começando
 
+### 📋 Pré-requisitos
+
+Você irá precisar das seguintes ferramentas para executar o projeto em sua máquina.
+
+```
+Ambiente de Desenvolvimento a sua escolha (Ex.: VS Code), Python (Versão 3.9.2 ou superior), Yarn https://yarnpkg.com/
+```
+
+### 🔧 Instalação
+
+
 ### Backend
 - Faça o clone dos repositório backend
 ```
@@ -59,30 +70,6 @@ yarn install
 - Rode o frontend
 ```
 yarn start
-```
-
-### 📋 Pré-requisitos
-
-Você irá precisar das seguintes ferramentas para executar o projeto em sua máquina.
-
-```
-Ambiente de Desenvolvimento a sua escolha (Ex.: VS Code), Python (Versão 3.9.2 ou superior)
-```
-
-### 🔧 Instalação
-
-Passo-a-passo para o que você deve executar no seu Prompt de Comando para executar o projeto localmente em sua máquina.
-
-Instale o Django utilizand o PIP:
-
-```
-pip install django
-```
-
-E depois inicie o projeto:
-
-```
-python manage.py runserver
 ```
 
 ## 📦 Desenvolvimento
