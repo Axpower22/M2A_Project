@@ -5,20 +5,61 @@ A M2a visa a expansão das carteiras de MPO(Microcrédito Produtivo e Orientado)
 Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria Empresarial para a matéria de Projeto Integrador 7 e 8.
 
 *Construção de uma solução online onde os participantes selecionam os empresários que participarão do projeto e fornecerão as informações sobre a gestão de seu negócio por intermédio do preenchimento de um questionário.
+
 ## Documentações
 
-Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto:
-
-- Vue: https://vuejs.org/v2/guide/
-- Vuetify: https://vuetifyjs.com/en/getting-started/installation/
-- Django: https://docs.djangoproject.com/en/3.2/
-- Django Rest Framework: https://www.django-rest-framework.org/
-
+<h3 style="color: red;"> Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto estão no final desse README.md.</h3>
 
 ## 🚀 Começando
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+### Backend
+- Faça o clone dos repositório backend
+```
+git clone {repositorio} && cd {pasta_do_repositório}
+```
+- Instale as dependências
+```
+pip install -r requirements.txt
+```
+- Realize as migrações
+```
+python manage.py makemigrations
+```
+```
+python manage.py migrate
+```
+- Semeie as tabelas dominio
+```
+python manage.py seed
+```
+- Crie um superuser
+```
+python manage.py createsuperuser --username=joe --email=joe@example.com
+```
+- Crie o Info do superuser
+```
+python manage.py generate_tokens
+```
+- Rode o backend
+```
+python manage.py runserver
+```
 
+### Frontend
+- Faça o clone dos repositório frontend 
+```
+git clone {repositorio} && cd {pasta_do_repositório}
+```
+
+- Instale as dependências
+```
+yarn install
+```
+
+- Rode o frontend
+```
+yarn start
+```
 
 ### 📋 Pré-requisitos
 
@@ -44,26 +85,6 @@ E depois inicie o projeto:
 python manage.py runserver
 ```
 
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
 ## 📦 Desenvolvimento
 
 Adicione notas adicionais sobre como implantar isso em um sistema ativo.
@@ -74,12 +95,11 @@ Ferramentas e Linguagens utilizadas no projeto:
 
 * [Python](https://www.python.org/) - Linguagem
 * [Django](https://www.djangoproject.com/) - Framework
+* [Django Rest Framework](https://www.django-rest-framework.org/) - Framework Para Criação de APIs com Django
 * [VS Code](https://code.visualstudio.com/) - Ambiente de Desenvolvimento
+* [Vue](https://vuejs.org/v2/guide/) - Framework Frontend
+* [Vuetify](https://vuetifyjs.com/en/getting-started/installation/) - Framwork de Componentes Vue (Material Design)
 * [Lucidchart](https://www.lucidchart.com/) - Ferramenta para Diagramar BD
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
 ## ✒️ Autores
 
