@@ -8,7 +8,12 @@ Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria
 
 ## Documentações
 
-<h3 style="color: red;"> Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto estão no final desse README.md.</h3>
+<h3 style="color: red;"> Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto estão no final desse README.md. </h3>
+<h3 style="color: red;"> Links para as documentações de utilizadas até aqui no desenvolvimento do projeto: </h3>
+
+- Diagrama de Entidades e Relacionamentos
+
+![Diagrama de Entidades e Relacionamentos](https://user-images.githubusercontent.com/51242246/143957497-0a70a5cf-501c-4d31-b269-af8d9c190c5c.png)
 
 ## 🚀 Começando
 
