@@ -5,6 +5,15 @@ A M2a visa a expansão das carteiras de MPO(Microcrédito Produtivo e Orientado)
 Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria Empresarial para a matéria de Projeto Integrador 7 e 8.
 
 *Construção de uma solução online onde os participantes selecionam os empresários que participarão do projeto e fornecerão as informações sobre a gestão de seu negócio por intermédio do preenchimento de um questionário.
+## Documentações
+
+Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto:
+
+Vue: https://vuejs.org/v2/guide/
+Vuetify: https://vuetifyjs.com/en/getting-started/installation/
+Django: https://docs.djangoproject.com/en/3.2/
+Django Rest Framework: https://www.django-rest-framework.org/
+
 
 ## 🚀 Começando
 
