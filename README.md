@@ -1,6 +1,6 @@
 # Projeto M2A
 
-A M2a visa a expansão das carteiras de MPO(Microcrédito Produtivo e Orientado) para as instituições financeiras parceiras dando ênfase ainda maior aos programas governamentais, com tratamento preferencial e diferenciado às Micro e Pequenas Empresas. Além disso, muda a percepção de que as instituições parceiras são meramente incentivadores de créditos e financiamentos e os empresários apenas tomadores de crédito.
+A M2A visa a expansão das carteiras de MPO(Microcrédito Produtivo e Orientado) para as instituições financeiras parceiras dando ênfase ainda maior aos programas governamentais, com tratamento preferencial e diferenciado às Micro e Pequenas Empresas. Além disso, muda a percepção de que as instituições parceiras são meramente incentivadores de créditos e financiamentos e os empresários apenas tomadores de crédito.
 
 Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria Empresarial para a matéria de Projeto Integrador 7 e 8.
 
@@ -9,7 +9,7 @@ Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria
 ## Documentações
 
 <h3 style="color: red;"> Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto estão no final desse README.md. </h3>
-<h3 style="color: red;"> Links para as documentações de utilizadas até aqui no desenvolvimento do projeto: </h3>
+<!-- <h3 style="color: red;"> Links para as documentações utilizadas até aqui no desenvolvimento do projeto: </h3> -->
 
 - Diagrama de Entidades e Relacionamentos
 
