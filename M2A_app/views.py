@@ -1,6 +1,6 @@
 from collections import namedtuple
 
-from django_filters.rest_framework import DjangoFilterBackend
+import django_filters
 from rest_framework import viewsets, decorators, views, filters, status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
@@ -14,11 +14,15 @@ EmpresaFKS = namedtuple('EmpresaFKS',
 
 UsuarioFKS = namedtuple('UsuarioFKS', ('ufs', 'perfis', 'situacoes'))
 
+DiagnosticoFKS = namedtuple('DiagnosticoFKS',
+                            ('ufs', 'setores', 'segmentos', 'valores_arrecadacoes', 'tipos_industria', 'grupos',
+                             'empresas_vinculadas', 'projetos', 'fases'))
+
 
 class EmpresaViewSet(viewsets.ModelViewSet):
     queryset = models.Empresa.objects.all()
     serializer_class = serializers.EmpresaSerializer
-    filter_backends = (filters.SearchFilter, DjangoFilterBackend,)
+    filter_backends = (filters.SearchFilter, django_filters.rest_framework.DjangoFilterBackend,)
     filterset_fields = ['fk_master', 'fk_uf', 'fk_valor_arrecadacao', 'fk_setor']
     search_fields = ['fantasia']
     permission_classes = [IsAuthenticated]
@@ -26,6 +30,8 @@ class EmpresaViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action == 'list':
             return serializers.ListaEmpresaSerializer
+        if self.action == 'partial_update':
+            return serializers.EmpresaPartialUpdateSerializer
         else:
             return serializers.EmpresaSerializer
 
@@ -78,9 +84,46 @@ class EmpresaFKSView(views.APIView):
         return Response(serialized_empresafks.data)
 
 
+class DiagnosticoFilter(django_filters.rest_framework.FilterSet):
+    fk_uf = django_filters.rest_framework.NumberFilter(field_name='empresa__fk_uf_id')
+    fk_projeto = django_filters.rest_framework.NumberFilter(field_name='empresa__projeto_id')
+    fk_valor_arrecadacao = django_filters.rest_framework.NumberFilter(field_name='empresa__fk_valor_arrecadacao_id')
+    fk_segmento = django_filters.rest_framework.NumberFilter(field_name='empresa__fk_segmento_id')
+    fk_setor = django_filters.rest_framework.NumberFilter(field_name='empresa__fk_setor_id')
+    fase = django_filters.rest_framework.CharFilter(field_name='fase')
+    fk_tipo_industria = django_filters.rest_framework.NumberFilter(field_name='empresa__fk_tipo_industria_id')
+    cidade = django_filters.rest_framework.CharFilter(field_name='empresa__cidade', lookup_expr='icontains')
+    bairro = django_filters.rest_framework.CharFilter(field_name='empresa__bairro', lookup_expr='icontains')
+
+    class Meta:
+        model = models.Diagnostico
+        fields = ['empresa']
+
+
 class DiagnosticoViewSet(viewsets.ModelViewSet):
     queryset = models.Diagnostico.objects.all()
     serializer_class = serializers.DiagnosticoSerializer
+    filter_backends = (filters.SearchFilter, django_filters.rest_framework.DjangoFilterBackend,)
+    search_fields = ['empresa__fantasia']
+    filterset_class = DiagnosticoFilter
+
+    @action(detail=False, methods=['GET'])
+    def fks(self, request, *args, **kwargs):
+        fks = DiagnosticoFKS(
+            ufs=models.UF.objects.all(),
+            setores=models.Setor.objects.all(),
+            segmentos=models.Segmento.objects.all(),
+            valores_arrecadacoes=models.ValorArrecadacao.objects.all(),
+            tipos_industria=models.TipoIndustria.objects.all(),
+            grupos=models.Grupo.objects.all(),
+            empresas_vinculadas=models.Empresa.objects.filter(bool_master=True),
+            projetos=models.Projeto.objects.all(),
+            fases=models.Diagnostico.objects.values_list('fase', flat=True).distinct()
+        )
+
+        serializer = serializers.DiagnosticoFKSerializer(fks)
+
+        return Response(serializer.data)
 
 
 class GruposView(views.APIView):
@@ -107,7 +150,6 @@ class UsuariosViewSet(viewsets.ModelViewSet):
                                                                       "confirmPassword": "Os valores devem ser iguais"})
 
         user = request.user
-        print(user)
         user.set_password(password)
 
         user.save()

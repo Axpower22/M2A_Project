@@ -112,6 +112,7 @@ class EmpresaSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Empresa
         fields = [
+            'id',
             'cnpj',
             'razao_social',
             'fantasia',
@@ -143,6 +144,12 @@ class EmpresaSerializer(serializers.ModelSerializer):
         ]
 
 
+class EmpresaPartialUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Empresa
+        fields = '__all__'
+
+
 class EmpresaVinculadaSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Empresa
@@ -164,6 +171,14 @@ class EmpresaFKSerializer(serializers.Serializer):
     grupos = GrupoSerializer(many=True)
     empresas_vinculadas = EmpresaVinculadaSerializer(many=True)
     projetos = ProjetoSerializer(many=True)
+
+
+class FaseList(serializers.ListField):
+    child = serializers.CharField()
+
+
+class DiagnosticoFKSerializer(EmpresaFKSerializer):
+    fases = FaseList()
 
 
 class PerfilSerializer(serializers.ModelSerializer):
@@ -204,7 +219,6 @@ class DiagnosticoSerializer(serializers.ModelSerializer):
     respostas = RespostaQuestionarioSerializer(many=True)
 
     def get_risco(self, obj):
-        print(obj.respostas)
         risco = 0
         for resposta_questionario in obj.respostas.all():
             risco += resposta_questionario.resposta.valor

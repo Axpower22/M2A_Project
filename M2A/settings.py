@@ -59,6 +59,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^http://localhost:8080",
+    r"^vercel",
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
