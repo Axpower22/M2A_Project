@@ -33,7 +33,7 @@ router.register(r'questionarios', views.QuestionarioViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth', obtain_auth_token),
+    path('auth/', obtain_auth_token),
     path('empresafks/', views.EmpresaFKSView.as_view()),
     path('grupos/', views.GruposView.as_view()),
     path('', include(router.urls)),
