@@ -60,6 +60,8 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+APPEND_SLASH = False
+
 # CORS_ALLOWED_ORIGIN_REGEXES = [
 #     r"^http://localhost:8080",
 #     r"^vercel",
