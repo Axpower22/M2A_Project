@@ -3,7 +3,7 @@ from M2A_app import models
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
 
-# admin.site.register(models.UsuarioInfo)
+admin.site.register(models.UsuarioInfo)
 admin.site.register(models.Situacao)
 admin.site.register(models.Perfil)
 admin.site.register(models.Empresa)
