@@ -16,7 +16,7 @@ class UsuarioInfo(Model):
     situacao = ForeignKey(Situacao, on_delete=SET_NULL, null=True)
     perfil = ForeignKey(Perfil, on_delete=SET_NULL, null=True)
 
-    empresa = ForeignKey(Empresa, on_delete=SET_NULL, null=True)
+    empresa = ForeignKey(Empresa, on_delete=SET_NULL, null=True, blank=True)
 
     FORMACAO_CHOICES = [
         ('Analfabeto', 'Analfabeto'),
