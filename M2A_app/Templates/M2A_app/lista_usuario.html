@@ -118,34 +118,15 @@
                                 <th>Situação</th>
                                 <th>Ações</th>
                             </tr>
-                            <tr>
-                                <td>João</td>
-                                <td>askjdkasjk@gmail.com</td>
-                                <td>estável</td>
-                                <td>aberta</td>
-                                <td>lixeira</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 60px 0px 60px 0px;"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 60px 0px 60px 0px;"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 60px 0px 60px 0px;"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            {% for usuario in usuarios %}
+                                <tr>
+                                    <td>{{ usuario.nome }}</td>
+                                    <td>{{ usuario.email }}</td>
+                                    <td>{{ usuario.uf }}</td>
+                                    <td>{{ usuario.situacao }}</td>
+                                    <td>lixeira</td>
+                                </tr>
+                            {% endfor %}
                         </table>
                     </div>
                 </div>

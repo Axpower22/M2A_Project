@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -25,8 +25,10 @@ SECRET_KEY = 'yji+4a#i^u%zib)j(n6)olkn4x9rzp*5ajy4j=dtg_p08v_%iv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'matheusmuniz.pythonanywhere.com',
+    'localhost'
+]
 
 # Application definition
 
@@ -38,18 +40,50 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'M2A_app.apps.M2AAppConfig',
-    'localflavor'
+    'localflavor',
+    'rest_framework',
+    'corsheaders',
+    'django_filters',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGIN_REGEXES = [
+#     r"^http://localhost:8080",
+#     r"^vercel",
+# ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
+DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
+
+DATE_FORMAT = '%d-%m-%Y'
+
+REST_FRAMEWORK = {
+    'DATE_FORMAT': '%d/%m/%Y',
+    'DATE_INPUT_FORMATS': [
+        '%d/%m/%Y'
+    ],
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
 
 ROOT_URLCONF = 'M2A.urls'
 
@@ -71,7 +105,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'M2A.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -81,7 +114,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -101,7 +133,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -115,11 +146,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # Imports google
 GOOGLE_OAUTH2_CLIENT_ID = 'your-actual-client-id-value'

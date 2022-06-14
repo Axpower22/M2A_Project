@@ -1,142 +1,231 @@
-<!DOCTYPE html>
-<html lang="pt-BR" dir="ltr">
-    <head>
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'M2A_app/css/cadastro_empresa.css' %}">
-        <link rel="shortcut icon" href="{%static 'M2A_app/img/favicon_m2a.ico' %}">
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <title>Cadastro de Empresa</title>
-        <script src="{% static 'M2A_app/js/dist/inputmask.js' %}"></script>
-    </head>
+{% extends "base.html" %}
 
-    <body>
-        <div class="container">
-            <img src="{% static 'M2A_app/img/m2a-logo.png' %}" id="logo" draggable="false" unselectable="on">
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'M2A_app/css/cadastro_empresa.css' %}">
+{% endblock %}
 
-            <div class="cadastro">
-                <h1>Cadastro de Empresa</h1>
-                <h2>Dados da Empresa</h2>
+{% block content %}
 
-                <form autocomplete="off">
-                    <label id="lb_cnpj">CNPJ:</label>
-                    <label id="lb_insc_estadual">Inscrição Estadual:</label>
-                    <label id="lb_check_master">É Cliente Master?</label>
+    <div class="cadastro">
+        <h1>Cadastro de Empresa</h1>
+        <h2>Dados da Empresa</h2>
 
-                    <br>
+        <form autocomplete="off" method="post">
+            {% csrf_token %}
+            <label id="lb_cnpj">CNPJ:</label>
+            <label id="lb_insc_estadual">Inscrição Estadual:</label>
+            <label id="lb_check_master">É Cliente Master?</label>
 
-                    <input id="cnpj" type="text" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
+            <br>
 
-                    <input id="id_insc_estadual" type="text" name="inscricao" autocomplete="off">
+            <input id="cnpj" type="text" name="cnpj" autocomplete="off" placeholder="__.___.___/____-__">
 
-                    <input id="id_check_master" type="checkbox" name="check_master">
+            <input id="id_insc_estadual" type="text" name="inscricao" autocomplete="off">
 
-                    <br>
+            <input id="id_check_master" type="checkbox" name="check_master">
 
-                    <label id="lb_nome_fantasia">Nome Fantasia:</label>
-                    <label id="lb_select_master">Master</label>
+            <br>
 
-                    <br>
+            <label id="lb_nome_fantasia">Nome Fantasia:</label>
+            <label id="lb_select_master">Master</label>
 
-                    <input id="id_nome_fantasia" type="text" name="nome_fantasia" autocomplete="off">
+            <br>
 
-                    <select id="select_master" name="select_master" disabled>
-                        <option value="" hidden>Selecione</option>
-                        <option value="1">Cliente</option>
-                        <option value="2">Cliente Master</option>
-                        <option value="3">Consultor</option>
-                        <option value="4">Consultor Master</option>
-                    </select>
+            <input id="id_nome_fantasia" type="text" name="nome_fantasia" autocomplete="off">
 
-                    <br>
+            <select id="select_master" name="select_master" disabled>
+                <option value="" hidden>Selecione</option>
+                <option value="1">Cliente</option>
+                <option value="2">Cliente Master</option>
+                <option value="3">Consultor</option>
+                <option value="4">Consultor Master</option>
+            </select>
 
-                    <label id="lb_razao">Razão Social:</label>
+            <br>
 
-                    <br>
+            <label id="lb_razao">Razão Social:</label>
 
-                    <input id="id_razao" type="text" name="razao" autocomplete="off">
+            <br>
 
-                    <br>
+            <input id="id_razao" type="text" name="razao" autocomplete="off">
 
-                    <label id="lb_tel_empresa">Telefone:</label>
-                    <label id="lb_cel_empresa">Celular:</label>
-                    <label id="lb_fax">Fax:</label>
-                    <label id="lb_cep">Cep:</label>
+            <br>
 
-                    <br>
+            <label id="lb_tel_empresa">Telefone:</label>
+            <label id="lb_cel_empresa">Celular:</label>
+            <label id="lb_fax">Fax:</label>
+            <label id="lb_cep">Cep:</label>
 
-                    <input id="tel" type="tel" name="tel_empresa" autocomplete="off" placeholder="(__) ____-____">
+            <br>
 
-                    <input id="cel" type="tel" name="cel_empresa" autocomplete="off" placeholder="(__) _____-____">
+            <input id="tel" type="tel" name="tel_empresa" autocomplete="off" placeholder="(__) ____-____">
 
-                    <input id="fax" type="text" name="fax" autocomplete="off" placeholder="(__) ____-____">
+            <input id="cel" type="tel" name="cel_empresa" autocomplete="off" placeholder="(__) _____-____">
 
-                    <input id="cep" type="text" name="cep" autocomplete="off" placeholder="_____-___">
+            <input id="fax" type="text" name="fax" autocomplete="off" placeholder="(__) ____-____">
 
-                    <br>
+            <input id="cep" type="text" name="cep" autocomplete="off" placeholder="_____-___">
 
-                    <label id="lb_end">Endereço:</label>
-                    <label id="lb_bairro">Bairro:</label>
+            <br>
 
-                    <br>
+            <label id="lb_end">Endereço:</label>
+            <label id="lb_bairro">Bairro:</label>
 
-                    <input id="id_endereco" type="text" name="endereco" autocomplete="off">
+            <br>
 
-                    <input id="id_bairro" type="text" name="bairro" autocomplete="off">
+            <input id="id_endereco" type="text" name="endereco" autocomplete="off">
 
-                    <br>
+            <input id="id_bairro" type="text" name="bairro" autocomplete="off">
 
-                    <label id="lb_comp">Complemento:</label>
+            <br>
 
-                    <input id="id_complemento" type="text" name="complemento" autocomplete="off">
+            <label id="lb_comp">Complemento:</label>
 
-                    <br>
+            <input id="id_complemento" type="text" name="complemento" autocomplete="off">
 
-                    <label id="lb_cid">Cidade:</label>
-                    <label id="lb_estado">UF/Estado</label>
+            <br>
 
-                    <br>
+            <label id="lb_cid">Cidade:</label>
+            <label id="lb_estado">UF/Estado:</label>
 
-                    <input id="id_cidade" type="text" name="cidade" autocomplete="off">
+            <br>
 
-                    <select name="estado">
-                        <option value="" hidden>Selecione</option>
-                        <option value="AC">AC-Acre</option>
-                        <option value="AL">AL-Alagoas</option>
-                        <option value="AP">AP-Amapá</option>
-                        <option value="AM">AM-Amazonas</option>
-                        <option value="BA">BA-Bahia</option>
-                        <option value="CE">CE-Ceará</option>
-                        <option value="DF">DF-Distrito Federal</option>
-                        <option value="ES">ES-Espírito Santo</option>
-                        <option value="GO">GO-Goiás</option>
-                        <option value="MA">MA-Maranhão</option>
-                        <option value="MT">MT-Mato Grosso</option>
-                        <option value="MS">MS-Mato Grosso do Sul</option>
-                        <option value="MG">MG-Minas Gerais</option>
-                        <option value="PA">PA-Pará</option>
-                        <option value="PB">PB-Paraíba</option>
-                        <option value="PR">PR-Paraná</option>
-                        <option value="PE">PE-Pernambuco</option>
-                        <option value="PI">PI-Piauí</option>
-                        <option value="RJ">RJ-Rio de Janeiro</option>
-                        <option value="RN">RN-Rio Grande do Norte</option>
-                        <option value="RS">RS-Rio Grande do Sul</option>
-                        <option value="RO">RO-Rondônia</option>
-                        <option value="RR">RR-Roraima</option>
-                        <option value="SC">SC-Santa Catarina</option>
-                        <option value="SP">SP-São Paulo</option>
-                        <option value="SE">SE-Sergipe</option>
-                        <option value="TO">TO-Tocantins</option>
-                        <option value="EX">Estrangeiro</option>
-                    </select>
+            <input id="id_cidade" type="text" name="cidade" autocomplete="off">
 
-                </form>
-            </div>
+            <select name="estado" id="select_estado" style="width: 20%;">
+                <option value="" hidden>Selecione</option>
+                {% for uf in ufs %}
+                    <option value=" {{ forloop.counter }} ">{{  uf.sg_uf }} - {{ uf.nome_uf }}</option>
+                {% endfor %}
+            </select>
 
-        <footer>M2A CONSULTORIA © TODOS OS DIREITOS RESERVADOS.</footer>
-        </div>
-        <script src="{% static 'M2A_app/js/main.js' %}"></script>
-    </body>
+        <h2>Informações do responsável</h2>
 
-</html>
+            <label id="lb_nome">Nome do responsável:</label>
+            <label id="lb_email">E-mail do responsável:</label>
+
+            <br>
+
+            <input id="id_nome" type="text" name="nome" autocomplete="off">
+
+            <input id="id_email" type="email" name="email" autocomplete="off">
+
+            <br>
+
+            <label id="lb_formacao">Formação acadêmica:</label>
+            <label id="lb_sexo">Sexo:</label>
+            <label id="lb_data">Data de nascimento:</label>
+
+            <br>
+
+            <select id="select_formacao" name="select_formacao">
+                <option value="" hidden>Selecione</option>
+                <option value="1">Ensino Médio incompleto</option>
+                <option value="2">Superior incompleto</option>
+                <option value="3">Médio completo</option>
+                <option value="4">Superior completo</option>
+            </select>
+
+            <select id="select_sexo" name="sexo">
+                <option value="" hidden>Selecione</option>
+                <option value="1">Masculino</option>
+                <option value="2">Feminino</option>
+                <option value="3">Outro</option>
+            </select>
+
+            <input id="id_data" type="date" name="data" autocomplete="off" placeholder="DD/MM/AA">
+
+            <h2>Informações adicionais</h2>
+
+            <label id="lb_setor">Setor:</label>
+            <label class="separa1">Segmento:</label>
+            <label class="separa1">Valor de arrecadação:</label>
+            <label class="separa1">Tipo de empresa:</label>
+
+            <br>
+
+            <select name="setor" id="select_setor">
+                <option value="" hidden>Selecione</option>
+                {% for setor in setores %}
+                    <option value=" {{ forloop.counter }} ">{{  setor.ds_setor }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="segmento" id="select_segmento" style="width: 15%;">
+                <option value="" hidden>Selecione</option>
+                {% for segmento in segmentos %}
+                    <option value=" {{ forloop.counter }} ">{{  segmento.ds_segmento }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="arrecadacao" id="select_arrecadacao">
+                <option value="" hidden>Selecione</option>
+                {% for arrecadacao in arrecadacoes %}
+                    <option value=" {{ forloop.counter }} ">{{  arrecadacao.ds_valor_arrecadacao }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="tipo_empresa" id="select_tipo_empresa" style="width: 15%;">
+                <option value="" hidden>Selecione</option>
+                {% for tipo_empresa in tipos_empresas %}
+                    <option value=" {{ forloop.counter }} ">{{  tipo_empresa.ds_tipo_industria }}</option>
+                {% endfor %}
+            </select>
+
+            <br>
+            <br>
+            <label id="lb_nome_projeto">Nome do Projeto:</label>
+            <label id="lb_numero_empregados">Número de Empregados:</label>
+            <label id="lb_email_2">E-mail:</label>
+            <br>
+
+            <input id="id_nome_projeto" type="text" name="nome_projeto" autocomplete="off">
+
+            <input id="id_numero_empregados" type="text" name="numero_empregados" autocomplete="off">
+
+            <input id="id_email2" type="email" name="email2" autocomplete="off">
+
+            <br>
+
+            <label id="lb_telefone">Telefone:</label>
+            <label id="lb_gestor_projeto">Gestor do projeto:</label>
+            <label id="lb_ano_inicio">Ano de início da atividade:</label>
+
+            <br>
+
+            <input id="id_telefone" type="tel" name="telefone" autocomplete="off">
+
+            <input id="id_gestor_projeto" type="text" name="gestor_projeto" autocomplete="off">
+
+            <input id="id_ano_inicio" type="text" name="ano" autocomplete="off">
+
+            <h2>Informações Complementares</h2>
+
+            <label>Descreva o negócio de sua empresa:</label><br>
+            <textarea class="text_areas" name="inf_negocio" autocomplete="off" rows="5" maxlength="500"></textarea>
+            <label>Missão:</label>
+            <textarea class="text_areas" name="inf_missao" autocomplete="off" rows="5" maxlength="500"></textarea>
+            <label>Visão:</label>
+            <textarea class="text_areas" name="inf_visao" autocomplete="off" rows="5" maxlength="500"></textarea>
+            <label>Valores:</label>
+            <textarea class="text_areas" name="inf_valores" autocomplete="off" rows="5" maxlength="500"></textarea>
+
+            <label>Faturamento de</label>
+            <select name="faturamento" id="select_faturamento">
+                <option value="" hidden>Selecione</option>
+                {% for faturamento in faturamentos %}
+                    <option value=" {{ forloop.counter }} ">{{  faturamento.dt_ano }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <textarea id="faturamento" name="valor_faturamento" autocomplete="off" rows="1" readonly="readonly">0,00</textarea>
+
+            <a href="/lista_empresa"><button><b>Voltar</b></button></a>
+            <button type="submit"><b>Salvar</b></button>
+        </form>
+    </div>
+
+
+
+{% endblock %}

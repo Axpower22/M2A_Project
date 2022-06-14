@@ -1,80 +1,58 @@
 # Projeto M2A
 
-A M2A visa a expansão das carteiras de MPO(Microcrédito Produtivo e Orientado) para as instituições financeiras parceiras dando ênfase ainda maior aos programas governamentais, com tratamento preferencial e diferenciado às Micro e Pequenas Empresas. Além disso, muda a percepção de que as instituições parceiras são meramente incentivadores de créditos e financiamentos e os empresários apenas tomadores de crédito.
+A M2a visa a expansão das carteiras de MPO(Microcrédito Produtivo e Orientado) para as instituições financeiras parceiras dando ênfase ainda maior aos programas governamentais, com tratamento preferencial e diferenciado às Micro e Pequenas Empresas. Além disso, muda a percepção de que as instituições parceiras são meramente incentivadores de créditos e financiamentos e os empresários apenas tomadores de crédito.
 
 Obs.: Este projeto é uma recriação* do sistema utilizado pela M2A Consultoria Empresarial para a matéria de Projeto Integrador 7 e 8.
 
 *Construção de uma solução online onde os participantes selecionam os empresários que participarão do projeto e fornecerão as informações sobre a gestão de seu negócio por intermédio do preenchimento de um questionário.
 
-## Documentações
-
-<h3 style="color: red;"> Links para as documentações de bibliotecas que foram utilizadas até aqui no desenvolvimento do projeto estão no final desse README.md. </h3>
-<!-- <h3 style="color: red;"> Links para as documentações utilizadas até aqui no desenvolvimento do projeto: </h3> -->
-
-- Diagrama de Entidades e Relacionamentos
-
-![Diagrama de Entidades e Relacionamentos](https://user-images.githubusercontent.com/51242246/143957497-0a70a5cf-501c-4d31-b269-af8d9c190c5c.png)
-
 ## 🚀 Começando
+
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+
 
 ### 📋 Pré-requisitos
 
 Você irá precisar das seguintes ferramentas para executar o projeto em sua máquina.
 
 ```
-Ambiente de Desenvolvimento a sua escolha (Ex.: VS Code), Python (Versão 3.9.2 ou superior), Yarn https://yarnpkg.com/
+Ambiente de Desenvolvimento a sua escolha (Ex.: VS Code), Python (Versão 3.9.2 ou superior)
 ```
 
 ### 🔧 Instalação
 
+Passo-a-passo para o que você deve executar no seu Prompt de Comando para executar o projeto localmente em sua máquina.
 
-### Backend
-- Faça o clone dos repositório backend
+Instale o Django utilizand o PIP:
+
 ```
-git clone {repositorio} && cd {pasta_do_repositório}
+pip install django
 ```
-- Instale as dependências
-```
-pip install -r requirements.txt
-```
-- Realize as migrações
-```
-python manage.py makemigrations
-```
-```
-python manage.py migrate
-```
-- Semeie as tabelas dominio
-```
-python manage.py seed
-```
-- Crie um superuser
-```
-python manage.py createsuperuser --username=joe --email=joe@example.com
-```
-- Crie o Info do superuser
-```
-python manage.py generate_tokens
-```
-- Rode o backend
+
+E depois inicie o projeto:
+
 ```
 python manage.py runserver
 ```
 
-### Frontend
-- Faça o clone dos repositório frontend 
+## ⚙️ Executando os testes
+
+Explicar como executar os testes automatizados para este sistema.
+
+### 🔩 Analise os testes de ponta a ponta
+
+Explique que eles verificam esses testes e porquê.
+
 ```
-git clone {repositorio} && cd {pasta_do_repositório}
+Dar exemplos
 ```
 
-- Instale as dependências
-```
-yarn install
-```
+### ⌨️ E testes de estilo de codificação
 
-- Rode o frontend
+Explique que eles verificam esses testes e porquê.
+
 ```
-yarn start
+Dar exemplos
 ```
 
 ## 📦 Desenvolvimento
@@ -87,11 +65,12 @@ Ferramentas e Linguagens utilizadas no projeto:
 
 * [Python](https://www.python.org/) - Linguagem
 * [Django](https://www.djangoproject.com/) - Framework
-* [Django Rest Framework](https://www.django-rest-framework.org/) - Framework Para Criação de APIs com Django
 * [VS Code](https://code.visualstudio.com/) - Ambiente de Desenvolvimento
-* [Vue](https://vuejs.org/v2/guide/) - Framework Frontend
-* [Vuetify](https://vuetifyjs.com/en/getting-started/installation/) - Framwork de Componentes Vue (Material Design)
 * [Lucidchart](https://www.lucidchart.com/) - Ferramenta para Diagramar BD
+
+## 📌 Versão
+
+Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
 ## ✒️ Autores
 

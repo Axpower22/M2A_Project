@@ -12,7 +12,7 @@ body, html{
 
 .container{
     position: relative;
-    height: 900px;
+    height: 1900px;
     width: 100%;
 }
 
@@ -30,21 +30,21 @@ body::-webkit-scrollbar-thumb {
     padding: 40px;
     height: 100px;
     position: relative;
-    left: 50%;
+    left: 8%;
     transform: translate(-50%, -10%);
 }
 
 .cadastro{
     width: 780px;
-    height: 700px;
+    height: 1700px;
     border: 2px solid #C4C4C4;
     border-radius: 60px 60px 60px 60px;
     color: #fff;
     background-color: #C4C4C4;
-    top: 55%;
+    top: 44%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -33%);
     box-sizing: border-box;
     padding: 32px 28px;
     box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.2);
@@ -183,16 +183,184 @@ h2{
 
 }
 
+#lb_email{
+    width: 100%;
+    text-align: left;
+    margin-left: 29%;
+}
+
+#lb_nome{
+    margin-right: 2%;
+}
+
+#id_nome{
+    width: 27%;
+}
+
+#id_email{
+    width: 30%;
+    margin-left: 205px;
+}
+
+#id_data{
+    margin-left: 12.5%;
+}
+
+#lb_sexo{
+    margin-left: 10%;
+}
+
+#lb_data{
+    margin-left: 20%;
+}
+
+.separa1{
+    margin-left: 75px;
+}
+
+.separa1_input{
+    margin-left: 20px;
+}
+
+#select_sexo{
+    margin-left: 15%;
+}
+
+#select_setor{
+    width: 15%;
+    margin-left: 1px;
+}
+
+#lb_setor{
+    margin-left: 10px;
+}
+
+#select_segmento{
+    margin-left: 30px;
+}
+
+#select_arrecadacao{
+    margin-left: 90px;
+}
+
+#select_formacao{
+    margin-left: 0px;
+}
+
+#select_sexo{
+    margin-left: 40px;
+}
+
+#select_tipo_empresa{
+    margin-left: 18%;
+}
+
+#select_estado{
+    margin-left: 101px;
+}
+
+#select_estado option{
+    text-align: center;
+}
+
+#lb_numero_empregados{
+    margin-left: 13%;
+}
+
+#lb_email_2{
+    margin-left: 30px;
+}
+
+#id_numero_empregados{
+    margin-left: 5%;
+}
+
+#id_email2{
+    margin-left: 5%;
+}
+
+#id_telefone{
+}
+
+#lb_gestor_projeto{
+    margin-left: 23%;
+}
+
+#lb_ano_inicio{
+    margin-left: 12%;
+}
+
+#id_gestor_projeto{
+    margin-left: 35px;
+}
+
+#id_ano_inicio{
+    margin-left: 38px;
+}
 
 #id_cidade{
     margin-left: 15%;
 
 }
 
+.text_areas{
+    width: 100%;
+    height: 100px;
+    outline: none;
+    padding: 3px 5px;
+    background: white;
+    resize: none;
+    border-radius: 8px 8px 8px 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#select_faturamento{
+    text-align: center;
+    margin-left: 1px;
+}
+#faturamento{
+    height: 20px;
+    line-height: 1.5;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 10px 10px;
+    outline: none;
+    resize: none;
+    text-align: center;
+}
+
 .cadastro select{
     margin-left: 15%;
 
 }
+
+button{
+    cursor: pointer;
+    color: white;
+    position: relative;
+    left: 35%;
+    padding: 10px 35px 10px 35px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-family: "Comfortaa", "Arial", sans-serif;
+    font-size: 14px;
+    background: #004976;
+    border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+button:hover{
+    background: #19394D;
+    transition: .3s;
+}
+
 .cadastro select{
     margin-left: 8%;
     background: #ebebeb;

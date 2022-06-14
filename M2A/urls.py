@@ -14,27 +14,27 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from M2A_app.views import login, cadastro_usuario, cadastro_empresa, lista_diagnostico,\
-    lista_empresa, lista_grupo, lista_usuario, lista_respostas, dados_usuario, graficos, registro_grupo,\
-    cadastro_diagnostico, cadastro_respostas, cadastro_perguntas, cadastro_empresa_dois
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
+from M2A_app import views
+
+router = DefaultRouter()
+router.register(r'empresas', views.EmpresaViewSet)
+router.register(r'diagnosticos', views.DiagnosticoViewSet)
+router.register(r'usuarios', views.UsuariosViewSet)
+router.register(r'questionarios', views.QuestionarioViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
-    path('cadastro_usuario/', cadastro_usuario),
-    path('cadastro_empresa/', cadastro_empresa),
-    path('lista_diagnosticos/', lista_diagnostico),
-    path('lista_empresa/', lista_empresa),
-    path('lista_grupo/', lista_grupo),
-    path('lista_usuario/', lista_usuario),
-    path('lista_respostas/', lista_respostas),
-    path('dados_usuario/', dados_usuario),
-    path('graficos/', graficos),
-    path('registro_grupo/', registro_grupo),
-    path('cadastro_diagnostico/', cadastro_diagnostico),
-    path('cadastro_respostas/', cadastro_respostas),
-    path('cadastro_perguntas/', cadastro_perguntas),
-    path('cadastro_empresa_dois/', cadastro_empresa_dois),
+    path('auth/', obtain_auth_token),
+    path('empresafks/', views.EmpresaFKSView.as_view()),
+    path('grupos/', views.GruposView.as_view()),
+    path('', include(router.urls)),
 ]
