@@ -93,6 +93,7 @@ class EmpresaSerializer(serializers.ModelSerializer):
     fk_setor = serializers.PrimaryKeyRelatedField(queryset=models.Setor.objects.all())
     fk_valor_arrecadacao = serializers.PrimaryKeyRelatedField(queryset=models.ValorArrecadacao.objects.all())
     fk_tipo_industria = serializers.PrimaryKeyRelatedField(queryset=models.TipoIndustria.objects.all())
+    fk_endereco = serializers.PrimaryKeyRelatedField(queryset=models.TipoIndustria.objects.all())
     # fk_grupo = GrupoSerializer(allow_null=True)
 
     faturamentos = FaturamentoSerializer(many=True)
@@ -141,6 +142,7 @@ class EmpresaSerializer(serializers.ModelSerializer):
             'cidade',
             'faturamentos',
             'usuario',
+            'fk_endereco',
         ]
 
 

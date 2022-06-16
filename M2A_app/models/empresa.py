@@ -9,6 +9,7 @@ from .setor import Setor
 from .tipo_industria import TipoIndustria
 from .uf import UF
 from .valor_arredacao import ValorArrecadacao
+from .endereco import Endereco
 
 
 class Empresa(Model):
@@ -45,13 +46,7 @@ class Empresa(Model):
     fk_valor_arrecadacao = ForeignKey(ValorArrecadacao, on_delete=SET_NULL, null=True)
     fk_tipo_industria = ForeignKey(TipoIndustria, on_delete=SET_NULL, null=True)
     fk_uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
-
-    # ENDEREÇO
-    cep = BRPostalCodeField()
-    logradouro = CharField(max_length=500)
-    bairro = CharField(max_length=500)
-    cidade = CharField(max_length=500)
-    complemento = CharField(blank=True, max_length=500)
+    fk_endereco = ForeignKey(Endereco, on_delete=SET_NULL, null=True)
 
     def __str__(self):
         return self.fantasia

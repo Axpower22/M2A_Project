@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 
 EmpresaFKS = namedtuple('EmpresaFKS',
                         ('ufs', 'setores', 'segmentos', 'valores_arrecadacoes', 'tipos_industria', 'grupos',
-                         'empresas_vinculadas', 'projetos'))
+                         'empresas_vinculadas', 'projetos', 'endereco'))
 
 UsuarioFKS = namedtuple('UsuarioFKS', ('ufs', 'perfis', 'situacoes'))
 
@@ -23,7 +23,7 @@ class EmpresaViewSet(viewsets.ModelViewSet):
     queryset = models.Empresa.objects.all()
     serializer_class = serializers.EmpresaSerializer
     filter_backends = (filters.SearchFilter, django_filters.rest_framework.DjangoFilterBackend,)
-    filterset_fields = ['fk_master', 'fk_uf', 'fk_valor_arrecadacao', 'fk_setor']
+    filterset_fields = ['fk_master', 'fk_uf', 'fk_valor_arrecadacao', 'fk_setor', 'fk_endereco']
     search_fields = ['fantasia']
     permission_classes = [IsAuthenticated]
 

@@ -5,18 +5,21 @@ from .empresa import Empresa
 from .perfil import Perfil
 from .situacao import Situacao
 from .uf import UF
+from .login import Login
 
 
 class UsuarioInfo(Model):
     user = OneToOneField(User, on_delete=CASCADE, default=1, related_name='info')
 
     nome = CharField(max_length=500)
-    uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
+    
     telefone = CharField(blank=True, max_length=500)
+
+    uf = ForeignKey(UF, on_delete=SET_NULL, null=True)
     situacao = ForeignKey(Situacao, on_delete=SET_NULL, null=True)
     perfil = ForeignKey(Perfil, on_delete=SET_NULL, null=True)
-
     empresa = ForeignKey(Empresa, on_delete=SET_NULL, null=True, blank=True)
+    login = ForeignKey(Login, on_delete=SET_NULL, null=True)
 
     FORMACAO_CHOICES = [
         ('Analfabeto', 'Analfabeto'),
